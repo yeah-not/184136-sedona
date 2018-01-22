@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Седона - Отзыв</title>
+</head>
+<body class="page page--review">
+  <header class="page-header">
+    <a class="logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    <nav class="main-nav">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="review.html" >Форма отзыва</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <article class="review">
+      <header class="review__title page-title page-title--inner">
+        <h1 class="page-title__name">Оставьте свой отзыв</h1>
+        <p class="page-title__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </header>
+      <form class="review__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="review__full-name form__set form__set--half-width">
+          <legend class="form__title">Представьтесь:</legend>
+          <div class="form__field">
+            <p class="field-text">
+              <label class="field-text__name" for="review_first_name">Имя*:</label>
+              <input class="field-text__input" type="text" name="first_name" id="review_first_name" value="" placeholder="Введите имя" required>
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте имя</span>
+            </p>
+            <p class="field-text">
+              <label class="field-text__name" for="review_second_name">Фамилия*:</label>
+              <input class="field-text__input" type="text" name="second_name" id="review_second_name" value="" placeholder="Введите фамилию" required>
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте фамилию</span>
+            </p>
+            <p class="field-text">
+              <label class="field-text__name" for="review_middle_name">Отчество*:</label>
+              <input class="field-text__input" type="text" name="middle_name" id="review_middle_name" value="" placeholder="Введите отчество">
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте отчество</span>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="review__contacts form__set">
+          <legend class="form__title">Контактная информация:</legend>
+          <div class="form__field">
+            <p class="field-text field-text--error">
+              <label class="field-text__name" for="review_phone">Контактный телефон*:</label>
+              <input class="field-text__input" type="text" name="phone" id="review_phone" value="" placeholder="Введите телефон" required>
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте номер</span>
+            </p>
+            <p class="field-text">
+              <label class="field-text__name" for="review_email">Электронная почта*:</label>
+              <input class="field-text__input" type="text" name="email" id="review_email" value="" placeholder="Введите e-mail" required>
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте почту</span>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="review__impression form__set form__set--half-width">
+          <legend class="form__title">Ваше общее впечатление:</legend>
+          <div class="form__field">
+            <p class="field-radio">
+              <label class="field-radio__name" for="review_impression_1">
+                <input class="field-radio__input" type="radio" name="impression" id="review_impression_1" value="1" checked>
+                <span class="field-radio__text">Скорее отрицательное</span>
+              </label>
+              <label class="field-radio__name" for="review_impression_2">
+                <input class="field-radio__input" type="radio" name="impression" id="review_impression_2" value="2">
+                <span class="field-radio__text">Скорее положительное</span>
+              </label>
+              <label class="field-radio__name" for="review_impression_3">
+                <input class="field-radio__input" type="radio" name="impression" id="review_impression_3" value="3">
+                <span class="field-radio__text">Затрудняюсь ответить</span>
+              </label>
+              <span class="field-radio__notice field-radio__notice--error">Ошибка, перепроверьте впечатление</span>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="review__sights form__set">
+          <legend class="form__title">Посещенные достопримечательности:</legend>
+          <div class="form__field">
+            <p class="field-checkbox">
+              <label class="field-checkbox__name" for="review_sigths_1">
+                <input class="field-checkbox__input" type="checkbox" name="sigths_1" id="review_sigths_1" >
+              </label>
+              <span class="field-checkbox__text">Мост Дьявола</span>
+              <label class="field-checkbox__name" for="review_sigths_2">
+                <input class="field-checkbox__input" type="checkbox" name="sigths_2" id="review_sigths_2" >
+                <span class="field-checkbox__text">Слайд-парк</span>
+              </label>
+              <label class="field-checkbox__name" for="review_sigths_3">
+                <input class="field-checkbox__input" type="checkbox" name="sigths_3" id="review_sigths_3" >
+                <span class="field-checkbox__text">Гора-Колокол</span>
+              </label>
+              <label class="field-checkbox__name" for="review_sigths_4">
+                <input class="field-checkbox__input" type="checkbox" name="sigths_4" id="review_sigths_4" >
+                <span class="field-checkbox__text">Красные скалы</span>
+              </label>
+              <span class="field-checkbox__notice field-checkbox__notice--error">Ошибка, перепроверьте достопримечательности</span>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="review__emotions form__set">
+          <legend class="form__title">Контактная информация:</legend>
+          <div class="form__field">
+            <p class="field-text field-text--area">
+              <label class="visually-hidden" for="review_emotions">Опишите свои эмоции:</label>
+              <textarea class="field-text__input" name="emotions" id="review_emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+              <span class="field-text__notice field-text__notice--error">Ошибка, перепроверьте эмоции</span>
+            </p>
+          </div>
+        </fieldset>
+        <div class="form__footer">
+          <p class="form__notice form__notice--bottom">* — Обязательные поля</p>
+          <p class="form__actions">
+            <input class="form__submit btn" type="submit" value="Отправить отзыв">
+          </p>
+        </div>
+      </form>
+    </article>
+  </main>
+  <footer class="page-footer">
+    <p class="footer__link"><a href="#">#visitsedona</a></p>
+    <p class="footer__social">
+      <span>Присоединяетесь к нам в соцсетях:</span>
+      <a href="#" class="social-link">
+        <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <span class="visually-hidden">,</span>
+      <a href="#" class="social-link">
+        <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <span class="visually-hidden">,</span>
+      <a href="#" class="social-link">
+        <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
+        <span class="visually-hidden">Youtube</span>
+      </a>
+    </p>
+    <p class="footer__copyright">
+      <a href="http://htmlacademy.ru/" class="footer__copyright-link">
+        Разработано
+        <img class="footer__copyright-icon" src="http://placehold.it/27x34" alt="">
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
