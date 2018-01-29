@@ -1,6 +1,6 @@
 .page-title {
-  @include outline-grid(1); /* TODO: Сетка */
-  ~ * { display: none; } /* TODO: Сетка */
+  // @include outline-grid(1); /* TODO: Сетка */
+  // ~ * { display: none; } /* TODO: Сетка */
 
   min-height: 240px; /* TODO: Сетка */
   padding: 42px $gap-sm 44px;

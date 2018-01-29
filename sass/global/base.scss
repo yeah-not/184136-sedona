@@ -35,7 +35,8 @@ svg {
   padding-bottom: 1000px;
 }
 
-.page-header {
+.page-header,
+.page-title {
   @include outline(-1);
 }
 
