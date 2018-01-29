@@ -1,0 +1,115 @@
+// Стандартные цвета для подсветки
+$black:         #000000;
+$white:         #fff;
+$sea-green:     #2E8B57;
+$orange-red:    #FF4500;
+$sky-blue:      #87CEEB;
+$gold:          #FFD700;
+$aquamarine:    #7FFFD4;
+$blue-violet:   #8A2BE2;
+
+// Превью дизайна
+@mixin body-bg($page: index, $top: 0, $overlap: 0, $opacity: 0.75, $path: "../design/preview/", $project: sedona, $min-height: 1000px) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: $top; bottom: 0;
+    @if $overlap == 1 {
+      z-index: 10000;
+      pointer-events: none;
+    } @else {
+      z-index: -1;
+    }
+
+
+
+    background: url("#{$path}/#{$project}-#{$page}-mobile.jpg") 50% 0 no-repeat;
+    opacity: $opacity;
+
+    @media (min-width: $screen-md) {
+      background-image: url("#{$path}/#{$project}-#{$page}-tablet.jpg");
+    }
+
+    @media (min-width: $screen-lg) {
+      background-image: url("#{$path}/#{$project}-#{$page}-desktop.jpg");
+    }
+  }
+}
+
+// Подсветка блока
+@mixin outline(
+  $badge: 1,
+  $hide-text: 1,
+  $outline-color: $color-black,
+  $color: $color-white,
+  $pos-y: top,
+  $pos-x: left
+) {
+  position: relative;
+
+  background-color: rgba($outline-color, 0.3);
+  outline: 1px solid $outline-color;
+  outline-offset: -1px;
+
+  @if $hide-text == 1 {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  @if $badge == 1 {
+    // Бейдж
+    &::before {
+      content: "." attr(class);
+      position: absolute;
+      #{$pos-x}: 0; #{$pos-y}: 0;
+      padding: 3px 5px;
+
+      font: bold 12px monospace;
+      text-indent: 0;
+
+      color: $color;
+      background: $outline-color;
+    }
+  } @else {
+    // Без бейджа и отсупов
+    // background-clip: border-box;
+    // outline: none;
+  }
+}
+
+@mixin outline-grid(
+  $levels-count: 3,
+  $badge: 1,
+  $hide-content: 1,
+  $start-level: 0,
+  $positions-x: left left left left left left,
+  $positions-y: top bottom top bottom top bottom,
+  $outline-colors: $sea-green $orange-red $sky-blue $gold $aquamarine $blue-violet,
+  $text-colors: $white $white $black $black $black $white
+) {
+
+  @mixin generate-child($i: 1) {
+
+    @if $i <= $levels-count {
+      $outline-color: nth($outline-colors, $i + $start-level);
+      $text-color: nth($text-colors, $i + $start-level);
+      $pos-y: nth($positions-y, $i + $start-level);
+      $pos-x: nth($positions-x, $i + $start-level);
+
+      @include outline($badge, $hide-content, $outline-color, $text-color, $pos-y, $pos-x);
+
+      @if $i == $levels-count and $hide-content == 1 {
+        > * { display: none; }
+      } @else {
+        > * {
+          @include generate-child($i + 1);
+        }
+      }
+    }
+  }
+
+  @include generate-child;
+}
