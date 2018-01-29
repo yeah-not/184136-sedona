@@ -24,3 +24,13 @@ svg {
 	width: 1px !important;
 	overflow: hidden;
 }
+
+
+/* TODO: Сетка */
+
+.page-header {
+  @include outline-grid(3); /* TODO: Сетка */
+  ~ * { display: none; }
+}
+
+/* EO TODO: Сетка */

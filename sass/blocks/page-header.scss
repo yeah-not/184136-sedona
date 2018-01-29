@@ -1,10 +1,12 @@
 .page-header {
-  @include outline-grid(3); /* TODO: Сетка */
   @include container;
 
   display: flex;
   flex-direction: column;
+
   position: relative;
+
+  padding-bottom: 390px;
 
   &__logo-wrap {
     order: 2;
@@ -28,7 +30,7 @@
   }
 
   @media (min-width: $screen-md) {
-
+    padding-bottom: 518px;
 
     &__logo-wrap {
       position: static;
