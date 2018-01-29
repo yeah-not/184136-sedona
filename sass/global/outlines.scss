@@ -50,6 +50,7 @@ $blue-violet:   #8A2BE2;
 ) {
   position: relative;
 
+  background-clip: content-box;
   background-color: rgba($outline-color, 0.3);
   outline: 1px solid $outline-color;
   outline-offset: -1px;

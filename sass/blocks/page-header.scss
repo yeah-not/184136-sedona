@@ -1,4 +1,5 @@
 .page-header {
+  // @include outline-grid(3); /* TODO: Сетка */
   @include container;
 
   display: flex;

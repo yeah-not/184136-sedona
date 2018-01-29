@@ -26,11 +26,21 @@ svg {
 }
 
 
+
+
+
+
 /* TODO: Сетка */
+.page {
+  padding-bottom: 1000px;
+}
 
 .page-header {
-  @include outline-grid(3); /* TODO: Сетка */
-  ~ * { display: none; }
+  @include outline(-1);
+}
+
+.page-footer {
+  display: none;
 }
 
 /* EO TODO: Сетка */

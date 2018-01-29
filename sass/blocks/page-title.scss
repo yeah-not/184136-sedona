@@ -1,0 +1,17 @@
+.page-title {
+  @include outline-grid(1); /* TODO: Сетка */
+  ~ * { display: none; } /* TODO: Сетка */
+
+  min-height: 240px; /* TODO: Сетка */
+  padding: 42px $gap-sm 44px;
+
+  @media (min-width: $screen-md) {
+    width: 450px;
+    min-height: 206px; /* TODO: Сетка */
+    margin: 0 auto;
+    padding: 48px 0 50px;
+    padding-top: 48px;
+
+    &--index { width: 500px; }
+  }
+}
