@@ -1,0 +1,50 @@
+.page-header {
+  @include outline-grid(3); /* TODO: Сетка */
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__logo-wrap {
+    order: 2;
+    position: relative;
+
+    height: 56px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 102px; /* TODO: Сетка */
+    height: 83px; /* TODO: Сетка */
+  }
+
+  &__nav-open {
+    display: none; /* TODO: Сетка */
+  }
+
+  @media (min-width: $screen-md) {
+
+
+    &__logo-wrap {
+      position: static;
+      height: 0;
+    }
+
+    &__nav-open {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    &__logo {
+      width: 187px; /* TODO: Картинки */
+      height: 96px; /* TODO: Картинки */
+    }
+  }
+}

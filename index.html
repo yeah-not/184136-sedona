@@ -4,15 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>Седона</title>
 </head>
 <body class="page page--index">
   <header class="page-header">
-    <a class="logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    <div class="page-header__logo-wrap">
+      <a class="page-header__logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+      <button class="page-header__nav-open" type="button">
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+    </div>
     <nav class="main-nav">
-      <ul class="main-nav__items">
+      <button class="main-nav__close" type="button">
+        <span class="visually-hidden">Скрыть меню</span>
+      </button>
+      <ul class="main-nav__items main-nav__items--part-1">
         <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
+      </ul>
+      <ul class="main-nav__items main-nav__items--part-2">
         <li class="main-nav__item"><a class="main-nav__link" href="review.html" >Форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
       </ul>

@@ -1,0 +1,31 @@
+.main-nav {
+  order: 1;
+
+  &__items {
+    @include list-reset;
+    min-height: 111px; /* TODO: Сетка */
+  }
+
+  &__close {
+    display: none; /* TODO: Сетка */
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+
+    &__close { display: none; }
+
+    &__items {
+      min-height: 56px; /* TODO: Сетка */
+      width: 333px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    &__items {
+      width: 506px;
+    }
+  }
+}
