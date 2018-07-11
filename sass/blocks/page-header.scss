@@ -1,5 +1,5 @@
 .page-header {
-  // @include outline-grid(3); /* TODO: Сетка */
+  @include outline-grid(3); /* TODO: Сетка */
   @include container;
 
   display: flex;
@@ -9,43 +9,46 @@
 
   padding-bottom: 390px;
 
-  &__logo-wrap {
+  &__logo {
     order: 2;
     position: relative;
 
     height: 56px;
+
+    a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 102px; /* TODO: Сетка */
+      height: 83px; /* TODO: Сетка */
+    }
   }
 
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 102px; /* TODO: Сетка */
-    height: 83px; /* TODO: Сетка */
-  }
-
-  &__nav-open {
+  &__nav-toggle {
     display: none; /* TODO: Сетка */
   }
 
   @media (min-width: $screen-md) {
     padding-bottom: 518px;
 
-    &__logo-wrap {
+    &__logo {
       position: static;
+      z-index: 1;
+
       height: 0;
     }
 
-    &__nav-open {
+    &__nav-toggle {
       display: none;
     }
   }
 
   @media (min-width: $screen-lg) {
 
-    &__logo {
+    &__logo a {
       width: 187px; /* TODO: Картинки */
       height: 96px; /* TODO: Картинки */
     }

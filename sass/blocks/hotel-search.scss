@@ -1,0 +1,10 @@
+.hotel-search {
+  $block: &;
+
+  @include outline-grid(1); /* TODO: Сетка */
+  ~ * { display: none; } /* TODO: Сетка */
+
+  min-height: 288px;
+  padding: 30px $gap-sm 50px;
+
+}
