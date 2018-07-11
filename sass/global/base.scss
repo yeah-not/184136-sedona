@@ -35,11 +35,12 @@ svg {
   padding-bottom: 1000px;
 }
 
-// .page-header,
+.page-header,
 .page-title,
 .features,
 .test {
   @include outline(-1);
+  img { display: none; }
 }
 
 .page-footer {

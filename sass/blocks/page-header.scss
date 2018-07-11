@@ -7,7 +7,7 @@
 
   position: relative;
 
-  padding-bottom: 390px;
+  padding-bottom: 158px;
 
   &__logo {
     order: 2;
@@ -31,8 +31,12 @@
     display: none; /* TODO: Сетка */
   }
 
+  &--index-page {
+    padding-bottom: 390px;
+  }
+
   @media (min-width: $screen-md) {
-    padding-bottom: 518px;
+    padding-bottom: 290px;
 
     &__logo {
       position: static;
@@ -44,13 +48,22 @@
     &__nav-toggle {
       display: none;
     }
+
+    &--index-page {
+      padding-bottom: 518px;
+    }
   }
 
   @media (min-width: $screen-lg) {
+    padding-bottom: 301px;
 
     &__logo a {
       width: 187px; /* TODO: Картинки */
       height: 96px; /* TODO: Картинки */
+    }
+
+    &--index-page {
+      padding-bottom: 518px;
     }
   }
 }

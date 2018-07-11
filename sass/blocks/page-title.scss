@@ -1,17 +1,34 @@
 .page-title {
-  // @include outline-grid(1); /* TODO: Сетка */
+  @include outline-grid(1); /* TODO: Сетка */
   // ~ * { display: none; } /* TODO: Сетка */
 
-  min-height: 240px; /* TODO: Сетка */
-  padding: 42px $gap-sm 44px;
+  min-height: 223px; /* TODO: Сетка */
+  padding: 40px $gap-sm 28px;
+
+  &--index-page {
+    padding-top: 38px;
+    padding-bottom: 24px;
+  }
 
   @media (min-width: $screen-md) {
     width: 450px;
     min-height: 206px; /* TODO: Сетка */
     margin: 0 auto;
-    padding: 48px 0 50px;
-    padding-top: 48px;
+    padding: 77px 0 70px;
 
-    &--index { width: 500px; }
+    &--index-page {
+      width: 500px;
+      padding-top: 48px;
+      padding-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 114px 0 72px;
+
+    &--index-page {
+      padding-top: 48px;
+      padding-bottom: 50px;
+    }
   }
 }
