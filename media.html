@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Седона - Отзыв</title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Седона - Фото и видео</title>
 </head>
-<body class="page page--review">
+<body class="page page--media">
   <header class="page-header">
-    <a class="logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    <div class="page-header__logo">
+      <a href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    </div>
+    <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
+      <span class="visually-hidden">Показать меню</span>
+      <span class="visually-hidden">Скрыть меню</span>
+    </button>
     <nav class="main-nav">
-      <ul class="main-nav__items">
+      <ul class="main-nav__items main-nav__items--part-1">
         <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a class="main-nav__link">Фото и видео</a></li>
+      </ul>
+      <ul class="main-nav__items main-nav__items--part-2">
         <li class="main-nav__item"><a class="main-nav__link" href="review.html" >Форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
       </ul>
@@ -20,17 +29,17 @@
   </header>
   <main class="page-main">
     <article class="media">
-      <header class="media__title page-title page-title--inner">
+      <header class="media__title page-title">
         <h1 class="page-title__name">Фото и видео</h1>
         <p class="page-title__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </header>
-      <section class="media-photos">
-        <div class="media-photo media-photo--main">
-          <a class="media-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
-          <div class="media-photo__info">
-            <p class="media-photo__name">Неродные просторы</p>
-            <p class="media-photo__author">Автор фото: Борис</p>
-            <p class="media-photo__likes likes">
+      <section class="media_gallery gallery">
+        <div class="gallery-photo gallery-photo--main">
+          <a class="gallery-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
+          <div class="gallery-photo__info">
+            <p class="gallery-photo__name">Неродные просторы</p>
+            <p class="gallery-photo__author">Автор фото: Борис</p>
+            <p class="gallery-photo__likes likes">
               <button type="button" class="likes__toggle btn btn--icon" title="Like it">
                 <img class="likes__icon" src="http://placehold.it/23x21" alt="">
                 <span class="visually-hidden">Like it</span>
@@ -39,12 +48,12 @@
             </p>
           </div>
         </div>
-        <div class="media-photo">
-          <a class="media-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
-          <div class="media-photo__info">
-            <p class="media-photo__name">Местная растительность</p>
-            <p class="media-photo__author">Автор фото: Сергей</p>
-            <p class="media-photo__likes likes">
+        <div class="gallery-photo">
+          <a class="gallery-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
+          <div class="gallery-photo__info">
+            <p class="gallery-photo__name">Местная растительность</p>
+            <p class="gallery-photo__author">Автор фото: Сергей</p>
+            <p class="gallery-photo__likes likes">
               <button type="button" class="likes__toggle btn btn--icon" title="Like it">
                 <img class="likes__icon" src="http://placehold.it/23x21" alt="">
                 <span class="visually-hidden">Like it</span>
@@ -53,12 +62,12 @@
             </p>
           </div>
         </div>
-        <div class="media-photo">
-          <a class="media-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
-          <div class="media-photo__info">
-            <p class="media-photo__name">Дорога на север</p>
-            <p class="media-photo__author">Автор фото: Петр</p>
-            <p class="media-photo__likes likes">
+        <div class="gallery-photo">
+          <a class="gallery-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
+          <div class="gallery-photo__info">
+            <p class="gallery-photo__name">Дорога на север</p>
+            <p class="gallery-photo__author">Автор фото: Петр</p>
+            <p class="gallery-photo__likes likes">
               <button type="button" class="likes__toggle btn btn--icon" title="Like it">
                 <img class="likes__icon" src="http://placehold.it/23x21" alt="">
                 <span class="visually-hidden">Like it</span>
@@ -67,12 +76,12 @@
             </p>
           </div>
         </div>
-        <div class="media-photo">
-          <a class="media-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
-          <div class="media-photo__info">
-            <p class="media-photo__name">Мост дьявола</p>
-            <p class="media-photo__author">Автор фото: Антон</p>
-            <p class="media-photo__likes likes">
+        <div class="gallery-photo">
+          <a class="gallery-photo__image" href="#"><img src="http://placehold.it/280x280" alt="Дорога"></a>
+          <div class="gallery-photo__info">
+            <p class="gallery-photo__name">Мост дьявола</p>
+            <p class="gallery-photo__author">Автор фото: Антон</p>
+            <p class="gallery-photo__likes likes">
               <button type="button" class="likes__toggle btn btn--icon" title="Like it">
                 <img class="likes__icon" src="http://placehold.it/23x21" alt="">
                 <span class="visually-hidden">Like it</span>
@@ -87,30 +96,33 @@
           <h2 class="page-title__name">Все еще сомневаетесь?</h2>
           <p class="page-title__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <div class="media-video__content">
-          <img src="http://placehold.it/320x200" alt="" class="media-video__image">
-        </div>
-        <div class="video-controls media-video__controls">
-          <div class="video-controls__volume"><span class="video-controls__volume-marker"></span></div>
-          <button class="video-controls__replay btn btn--icon" type="button" title="Replay">
-            <img src="http://placehold.it/16x20" alt="">
-            <span class="visually-hidden">Replay</span>
-          </button>
-          <button class="video-controls__subtitles btn btn--icon" type="button" title="Subtitles">
-            <img src="http://placehold.it/32x20" alt="">
-            <span class="visually-hidden">Subtitles</span
-          </button>
-          <button class="video-controls__fullscreen btn btn--icon" type="button" title="Fullscreen">
-            <img src="http://placehold.it/20x20" alt="">
-            <span class="visually-hidden">Fullscreen</span
-          </button>
+        <div class="media-video__video video">
+          <!-- <img src="http://placehold.it/320x200" alt="" class="media-video__image"> -->
+          <video class="video__content" src="#" autoplay poster="http://placehold.it/320x200">
+
+          </video>
+          <div class="video__controls video-controls">
+            <div class="video-controls__volume"><span class="video-controls__volume-marker"></span></div>
+            <button class="video-controls__replay btn btn--icon" type="button" title="Replay">
+              <img src="http://placehold.it/16x20" alt="">
+              <span class="visually-hidden">Replay</span>
+            </button>
+            <button class="video-controls__subtitles btn btn--icon" type="button" title="Subtitles">
+              <img src="http://placehold.it/32x20" alt="">
+              <span class="visually-hidden">Subtitles</span>
+            </button>
+            <button class="video-controls__fullscreen btn btn--icon" type="button" title="Fullscreen">
+              <img src="http://placehold.it/20x20" alt="">
+              <span class="visually-hidden">Fullscreen</span>
+            </button>
+          </div>
         </div>
       </section>
     </article>
   </main>
   <footer class="page-footer">
-    <p class="footer__link"><a href="#">#visitsedona</a></p>
-    <p class="footer__social">
+    <p class="page-footer__link"><a href="index.html">#visitsedona</a></p>
+    <p class="page-footer__social">
       <span>Присоединяетесь к нам в соцсетях:</span>
       <a href="#" class="social-link">
         <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
@@ -127,10 +139,10 @@
         <span class="visually-hidden">Youtube</span>
       </a>
     </p>
-    <p class="footer__copyright">
-      <a href="http://htmlacademy.ru/" class="footer__copyright-link">
+    <p class="page-footer__copyright">
+      <a href="http://htmlacademy.ru/" class="page-footer__copyright-link">
         Разработано
-        <img class="footer__copyright-icon" src="http://placehold.it/27x34" alt="">
+        <img class="page-footer__copyright-icon" src="http://placehold.it/27x34" alt="">
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </p>
