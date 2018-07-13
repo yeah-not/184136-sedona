@@ -1,6 +1,9 @@
 .page-header {
-  // @include outline-grid(3); /* TODO: Сетка */
+  $block: &;
   @include container;
+
+  // @include outline-grid(3); /* TODO: Сетка */
+  // ~ * { display: none; } /* TODO: Сетка */
 
   display: flex;
   flex-direction: column;
