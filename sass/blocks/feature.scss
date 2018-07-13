@@ -3,10 +3,13 @@
   $fact-width-md: 256px;
   $fact-width-lg: 400px;
 
-  // @include outline-grid(3); /* TODO: Сетка */
+  @include outline-grid(3); /* TODO: Сетка */
 
   &__fact {
     min-height: 168px; /* TODO: Сетка */
+    padding: 29px $gap-sm 27px;
+
+    * { display: none; } /* TODO: Сетка */
   }
 
   &__image {
@@ -17,15 +20,24 @@
 
   &__items {
     @include list-reset;
+
+    padding: 26px $gap-sm 20px;
   }
 
   &__item {
-    min-height: 139px; /* TODO: Сетка */
+    min-height: 110px; /* TODO: Сетка */
+    margin-bottom: 19px;
+
+    &:nth-child(2) {
+      min-height: 93px; /* TODO: Сетка */
+    }
   }
 
   &--main {
     #{$block}__fact {
       min-height: 191px; /* TODO: Сетка */
+      padding-top: 41px;
+      padding-bottom: 39px;
     }
   }
 
@@ -34,23 +46,35 @@
     flex-wrap: wrap;
 
     &__fact {
-      width: 256px;
+      width: $fact-width-md;
       min-height: 256px; /* TODO: Сетка */
+      padding: 47px;
+      // ??? padding: 47px 45px;
     }
 
     &__image {
-      width: 512px;
+      width: $fact-width-md * 2;
       min-height: 256px; /* TODO: Сетка */
     }
 
     &__items {
       display: flex;
       order: 3;
+
+      padding: 60px 0 63px;
     }
 
     &__item {
-      width: 256px;
-      min-height: 330px;
+      width: $fact-width-md;
+      min-height: 208px; /* TODO: Сетка */
+      margin: 0;
+      padding: 0 45px;
+    }
+
+    &--main {
+      #{$block}__fact {
+        min-height: 256px; /* TODO: Сетка */
+      }
     }
 
     &--left {
@@ -67,15 +91,23 @@
   @media (min-width: $screen-lg) {
 
     &__fact {
-      width: 400px;
+      width: $fact-width-lg;
+      padding: 47px 65px 65px;
     }
 
     &__image {
-      width: 800px;
+      width: $fact-width-lg * 2;
     }
 
     &__item {
-      width: 400px;
+      width: $fact-width-lg;
+    }
+
+    &--main {
+      #{$block}__fact {
+        padding-top: 54px;
+        padding-bottom: 60px;
+      }
     }
   }
 }
