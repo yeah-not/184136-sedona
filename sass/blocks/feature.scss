@@ -3,7 +3,7 @@
   $fact-width-md: 256px;
   $fact-width-lg: 400px;
 
-  @include outline-grid(3); /* TODO: Сетка */
+  // @include outline-grid(3); /* TODO: Сетка */
 
   &__fact {
     min-height: 168px; /* TODO: Сетка */
