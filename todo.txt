@@ -1,1 +1,1 @@
-TODO: FIX разметка Header/Footer на Index, Media страницах. Подключение стилей + сетки на Media странице, сетка Header, Title. FIX разметка страницы Media.  
+TODO: Fix разметки, сетка Gallery, Video на странице Media.  

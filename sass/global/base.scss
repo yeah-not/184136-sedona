@@ -32,7 +32,7 @@ svg {
 
 /* TODO: Сетка */
 .page {
-  padding-bottom: 1000px;
+  // padding-bottom: 1000px;
 }
 
 .page-header,
@@ -41,6 +41,7 @@ svg {
 .features,
 .hotel-search,
 .map,
+.gallery,
 .test {
   @include outline(-1);
   img { display: none; }
