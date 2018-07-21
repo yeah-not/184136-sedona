@@ -1,0 +1,70 @@
+.form {
+  $block: &;
+
+  @include outline-grid(2,1,-1); /* TODO: Сетка */
+
+  &__set {
+
+    padding: 20px $gap-sm 28px;
+    margin: 0;
+
+    border: none;
+
+    &:nth-child(1) { min-height: 304px; }
+    &:nth-child(2) { min-height: 317px; }
+    &:nth-child(3) { min-height: 289px; }
+    &:nth-child(4) { min-height: 409px; }
+    &:nth-child(5) { min-height: 250px; }
+  }
+
+  &__footer {
+    min-height: 118px;
+    padding: 23px $gap-sm 37px;
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__set {
+      width: 100%;
+      padding: 0 $gap-md;
+      margin-bottom: 80px;
+
+      &:last-of-type {
+        margin-bottom: 58px;
+      }
+
+      &--half-width {
+        width: 50%;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) { min-height: 298px; }
+      &:nth-child(3) { min-height: 241px; }
+      &:nth-child(4) { min-height: 213px; }
+      &:nth-child(5) { min-height: 230px; }
+    }
+
+    &__footer {
+      width: 100%;
+      min-height: 58px; /* TODO: Сетка */
+      padding: 0 $gap-md;
+      margin-bottom: 51px;
+    }
+
+    @media (min-width: $screen-lg) {
+      &__set {
+        padding: 0 $gap-lg;
+
+        &:nth-child(3) { min-height: 144px; }
+        &:nth-child(4) { min-height: 123px; }
+      }
+
+      &__footer {
+        padding: 0 $gap-lg;
+        margin-bottom: 57px;
+      }
+    }
+  }
+}

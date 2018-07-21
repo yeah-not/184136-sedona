@@ -1,1 +1,1 @@
-TODO: Fix разметки, сетка Gallery, Video на странице Media.  
+TODO: Fix разметки, сетка страницы Review c form. Fix сетки Video.

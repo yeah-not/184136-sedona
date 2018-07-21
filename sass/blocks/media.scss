@@ -1,5 +1,6 @@
 .media {
   $block: &;
+  // @include outline-grid(4); /* TODO: Сетка */
 
   @media (min-width: $screen-md) {
     padding: 0 $gap-md;

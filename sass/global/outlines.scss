@@ -52,7 +52,7 @@ $blue-violet:   #8A2BE2;
 
   background-clip: content-box;
   background-color: rgba($outline-color, 0.3);
-  outline: 1px solid $outline-color;
+  outline: 1px dashed $outline-color;
   outline-offset: -1px;
 
   @if $hide-text == 1 {
@@ -76,7 +76,7 @@ $blue-violet:   #8A2BE2;
     }
   } @else {
     // Без бейджа и отсупов
-    background-clip: border-box;
+    // background-clip: border-box;
   }
 }
 

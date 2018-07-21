@@ -15,7 +15,7 @@
     width: 450px;
     min-height: 248px; /* TODO: Сетка */
     margin: 0 auto;
-    padding: 77px 0 70px;
+    padding: 72px 0 70px;
 
     &--index-page {
       width: 500px;
@@ -27,7 +27,7 @@
 
   @media (min-width: $screen-lg) {
     min-height: 287px; /* TODO: Сетка */
-    padding: 114px 0 72px;
+    padding: 110px 0 72px;
 
     &--index-page {
       min-height: 206px; /* TODO: Сетка */

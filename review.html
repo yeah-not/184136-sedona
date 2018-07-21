@@ -4,23 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>Седона - Отзыв</title>
 </head>
 <body class="page page--review">
   <header class="page-header">
-    <a class="logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    <div class="page-header__logo">
+      <a href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+    </div>
+    <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
+      <span class="visually-hidden">Показать меню</span>
+      <span class="visually-hidden">Скрыть меню</span>
+    </button>
     <nav class="main-nav">
-      <ul class="main-nav__items">
+      <ul class="main-nav__items main-nav__items--part-1">
         <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="review.html" >Форма отзыва</a></li>
+      </ul>
+      <ul class="main-nav__items main-nav__items--part-2">
+        <li class="main-nav__item"><a class="main-nav__link">Форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <article class="review">
-      <header class="review__title page-title page-title--inner">
+      <header class="review__title page-title">
         <h1 class="page-title__name">Оставьте свой отзыв</h1>
         <p class="page-title__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </header>
@@ -45,7 +54,7 @@
             </p>
           </div>
         </fieldset>
-        <fieldset class="review__contacts form__set">
+        <fieldset class="review__contacts form__set form__set--half-width">
           <legend class="form__title">Контактная информация:</legend>
           <div class="form__field">
             <p class="field-text field-text--error">
@@ -60,7 +69,7 @@
             </p>
           </div>
         </fieldset>
-        <fieldset class="review__impression form__set form__set--half-width">
+        <fieldset class="review__impression form__set">
           <legend class="form__title">Ваше общее впечатление:</legend>
           <div class="form__field">
             <p class="field-radio">
@@ -124,8 +133,8 @@
     </article>
   </main>
   <footer class="page-footer">
-    <p class="footer__link"><a href="#">#visitsedona</a></p>
-    <p class="footer__social">
+    <p class="page-footer__link"><a href="index.html">#visitsedona</a></p>
+    <p class="page-footer__social">
       <span>Присоединяетесь к нам в соцсетях:</span>
       <a href="#" class="social-link">
         <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
@@ -142,10 +151,10 @@
         <span class="visually-hidden">Youtube</span>
       </a>
     </p>
-    <p class="footer__copyright">
-      <a href="http://htmlacademy.ru/" class="footer__copyright-link">
+    <p class="page-footer__copyright">
+      <a href="http://htmlacademy.ru/" class="page-footer__copyright-link">
         Разработано
-        <img class="footer__copyright-icon" src="http://placehold.it/27x34" alt="">
+        <img class="page-footer__copyright-icon" src="http://placehold.it/27x34" alt="">
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </p>

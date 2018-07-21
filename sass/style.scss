@@ -6,6 +6,8 @@
 @import "global/fonts.scss";
 @import "global/base.scss";
 
+@import "blocks/forms/form.scss";
+
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
@@ -22,3 +24,4 @@
 @import "blocks/gallery.scss";
 @import "blocks/gallery-photo.scss";
 @import "blocks/video.scss";
+@import "blocks/review.scss";
