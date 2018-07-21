@@ -24,3 +24,29 @@ svg {
 	width: 1px !important;
 	overflow: hidden;
 }
+
+
+
+
+
+
+/* TODO: Сетка */
+.page {
+  padding-bottom: 1000px;
+  // padding-bottom: 300px;
+}
+
+.page-header,
+.page-footer,
+.page-title,
+.features,
+.hotel-search,
+.map,
+.gallery,
+.video,
+.test {
+  @include outline(-1);
+  img { display: none; }
+}
+
+/* EO TODO: Сетка */

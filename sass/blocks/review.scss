@@ -1,0 +1,27 @@
+.review {
+  $block: &;
+  // @include outline-grid(3); /* TODO: Сетка */
+
+  &__title {
+    min-height: 204px; /* TODO: Сетка */
+    padding-bottom: 17px;
+
+    > * { display: none; } /* TODO: Сетка */
+  }
+
+  @media (min-width: $screen-md) {
+
+    &__title {
+      min-height: 254px; /* TODO: Сетка */
+      padding-bottom: 76px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    &__title {
+      min-height: 274px; /* TODO: Сетка */
+      padding-bottom: 61px;
+    }
+  }
+}

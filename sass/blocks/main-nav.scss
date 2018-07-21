@@ -17,15 +17,28 @@
     &__close { display: none; }
 
     &__items {
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 306px; /* TODO: Сетка */
       min-height: 56px; /* TODO: Сетка */
-      width: 333px;
+    }
+
+    &__item {
+      // width: 153px;
+      flex-grow: 1;
+      min-height: 56px; /* TODO: Сетка */
     }
   }
 
   @media (min-width: $screen-lg) {
 
     &__items {
-      width: 506px;
+      width: 478px;
+    }
+
+    &__item {
+      // width: 239px;
     }
   }
 }

@@ -8,17 +8,15 @@
   <title>Седона</title>
 </head>
 <body class="page page--index">
-  <header class="page-header">
-    <div class="page-header__logo-wrap">
-      <a class="page-header__logo" href="index.html"><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
-      <button class="page-header__nav-open" type="button">
-        <span class="visually-hidden">Показать меню</span>
-      </button>
+  <header class="page-header page-header--index-page">
+    <div class="page-header__logo">
+      <a><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
     </div>
+    <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
+      <span class="visually-hidden">Показать меню</span>
+      <span class="visually-hidden">Скрыть меню</span>
+    </button>
     <nav class="main-nav">
-      <button class="main-nav__close" type="button">
-        <span class="visually-hidden">Скрыть меню</span>
-      </button>
       <ul class="main-nav__items main-nav__items--part-1">
         <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
@@ -30,57 +28,63 @@
     </nav>
   </header>
   <main class="page-main">
-    <header class="page-title page-title--index">
+    <header class="page-title page-title--index-page">
       <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
       <strong class="visually-hidden">Because the Grand Canyon sucks!</strong>
-      <p class="page-title__slogan"><b>Cедона — небольшой городок в аризоне, заслуживающий большего!</b></p>
+      <p class="page-title__slogan"><b>Cедона — небольшой городок в Аризоне,<br> заслуживающий большего!</b></p>
       <p class="page-title__intro">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
     </header>
-    <section class="feature">
-      <div class="feature__text">
-        <h2 class="feature__title"><span class="feature__num">№1</span> Настоящий городок</h2>
-        <p class="feature__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
-      </div>
-      <figure class="feature__image"><img src="http://placehold.it/320x260" alt="Вид на город"></figure>
-      <div class="feature__items">
-        <div class="feature__item">
-          <img class="feature__item-icon" src="http://placehold.it/39x37" alt="">
-          <h3 class="feature__item-title">Жилье</h3>
-          <p class="feature__item-desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+    <section class="features">
+      <article class="feature feature--main feature--left">
+        <div class="feature__fact">
+          <h2 class="feature__title"><span class="feature__num">№1</span> Настоящий городок</h2>
+          <p class="feature__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <div class="feature__item">
-          <img class="feature__item-icon" src="http://placehold.it/32x38" alt="">
-          <h3 class="feature__item-title">Еда</h3>
-          <p class="feature__item-desc">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+        <div class="feature__image"><img src="http://placehold.it/320x260" alt="Вид на город"></div>
+        <ul class="feature__items">
+          <li class="feature__item">
+            <img class="feature__item-icon" src="http://placehold.it/39x37" alt="">
+            <h3 class="feature__item-title">Жилье</h3>
+            <p class="feature__item-desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </li>
+          <li class="feature__item">
+            <img class="feature__item-icon" src="http://placehold.it/32x38" alt="">
+            <h3 class="feature__item-title">Еда</h3>
+            <p class="feature__item-desc">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+          </li>
+          <li class="feature__item">
+            <img class="feature__item-icon" src="http://placehold.it/40x35" alt="">
+            <h3 class="feature__item-title">Сувениры</h3>
+            <p class="feature__item-desc">Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+      </article>
+      <article class="feature feature--main feature--right">
+        <div class="feature__fact">
+          <h2 class="feature__title"><span class="feature__num">№2</span> Там есть Мост Дьявола</h2>
+          <p class="feature__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
-        <div class="feature__item">
-          <img class="feature__item-icon" src="http://placehold.it/40x35" alt="">
-          <h3 class="feature__item-title">Сувениры</h3>
-          <p class="feature__item-desc">Не только китайского, но и местного производства!</p>
+        <div class="feature__image"><img src="http://placehold.it/320x260" alt="Мост дьявола"></div>
+      </article>
+      <article class="feature">
+        <div class="feature__fact">
+          <h2 class="feature__title"><span class="feature__num">№3</span> Небольшая площадь</h2>
+          <p class="feature__desc">Все достопримечательности находятся очень близко</p>
         </div>
-      </div>
+      </article>
+      <article class="feature">
+        <div class="feature__fact">
+          <h2 class="feature__title"><span class="feature__num">№4</span> Красивая дорога</h2>
+          <p class="feature__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="feature__fact">
+          <h2 class="feature__title"><span class="feature__num">№5</span> Мало туристов</h2>
+          <p class="feature__desc">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </article>
     </section>
-    <section class="feature">
-      <div class="feature__text">
-        <h2 class="feature__title"><span class="feature__num">№2</span> Там есть Мост Дьявола</h2>
-        <p class="feature__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-      </div>
-      <figure class="feature__image"><img src="http://placehold.it/320x260" alt="Мост дьявола"></figure>
-    </section>
-    <div class="feature__wrap">
-      <section class="feature">
-        <h2 class="feature__title"><span class="feature__num">№3</span> Небольшая площадь</h2>
-        <p class="feature__desc">Все достопримечательности находятся очень близко</p>
-      </section>
-      <section class="feature">
-        <h2 class="feature__title"><span class="feature__num">№4</span> Красивая дорога</h2>
-        <p class="feature__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </section>
-      <section class="feature">
-        <h2 class="feature__title"><span class="feature__num">№5</span> Мало туристов</h2>
-        <p class="feature__desc">Большинство едет в Гранд Каньон и толпится там</p>
-      </section>
-    </div>
     <section class="hotel-search">
       <h2 class="hotel-search__title">Заинтересовались?</h2>
       <p class="hotel-search__desc">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
@@ -94,8 +98,8 @@
     </section>
   </main>
   <footer class="page-footer">
-    <p class="footer__link"><a href="#">#visitsedona</a></p>
-    <p class="footer__social">
+    <p class="page-footer__link"><a>#visitsedona</a></p>
+    <p class="page-footer__social">
       <span>Присоединяетесь к нам в соцсетях:</span>
       <a href="#" class="social-link">
         <img class="social-link__icon" src="http://placehold.it/46x48" alt="">
@@ -112,10 +116,10 @@
         <span class="visually-hidden">Youtube</span>
       </a>
     </p>
-    <p class="footer__copyright">
-      <a href="http://htmlacademy.ru/" class="footer__copyright-link">
+    <p class="page-footer__copyright">
+      <a href="http://htmlacademy.ru/" class="page-footer__copyright-link">
         Разработано
-        <img class="footer__copyright-icon" src="http://placehold.it/27x34" alt="">
+        <img class="page-footer__copyright-icon" src="http://placehold.it/27x34" alt="">
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </p>

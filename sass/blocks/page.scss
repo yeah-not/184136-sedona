@@ -17,4 +17,12 @@
   &--index {
     @include body-bg(index);
   }
+
+  &--media {
+    @include body-bg(photo);
+  }
+
+  &--review {
+    @include body-bg(form);
+  }
 }

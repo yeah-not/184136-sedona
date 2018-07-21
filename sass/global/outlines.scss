@@ -50,8 +50,9 @@ $blue-violet:   #8A2BE2;
 ) {
   position: relative;
 
+  background-clip: content-box;
   background-color: rgba($outline-color, 0.3);
-  outline: 1px solid $outline-color;
+  outline: 1px dashed $outline-color;
   outline-offset: -1px;
 
   @if $hide-text == 1 {
@@ -76,15 +77,14 @@ $blue-violet:   #8A2BE2;
   } @else {
     // Без бейджа и отсупов
     // background-clip: border-box;
-    // outline: none;
   }
 }
 
 @mixin outline-grid(
   $levels-count: 3,
+  $start-level: 1,
   $badge: 1,
   $hide-content: 1,
-  $start-level: 0,
   $positions-x: left left left left left left,
   $positions-y: top bottom top bottom top bottom,
   $outline-colors: $sea-green $orange-red $sky-blue $gold $aquamarine $blue-violet,
@@ -94,10 +94,10 @@ $blue-violet:   #8A2BE2;
   @mixin generate-child($i: 1) {
 
     @if $i <= $levels-count {
-      $outline-color: nth($outline-colors, $i + $start-level);
-      $text-color: nth($text-colors, $i + $start-level);
-      $pos-y: nth($positions-y, $i + $start-level);
-      $pos-x: nth($positions-x, $i + $start-level);
+      $outline-color: nth($outline-colors, $i + $start-level - 1);
+      $text-color: nth($text-colors, $i + $start-level - 1);
+      $pos-y: nth($positions-y, $i + $start-level - 1);
+      $pos-x: nth($positions-x, $i + $start-level - 1);
 
       @include outline($badge, $hide-content, $outline-color, $text-color, $pos-y, $pos-x);
 

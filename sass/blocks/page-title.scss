@@ -1,0 +1,38 @@
+.page-title {
+  // @include outline-grid(1); /* TODO: Сетка */
+  // ~ * { display: none; } /* TODO: Сетка */
+
+  min-height: 189px; /* TODO: Сетка */
+  padding: 40px $gap-sm 28px;
+
+  &--index-page {
+    min-height: 223px; /* TODO: Сетка */
+    padding-top: 38px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 450px;
+    min-height: 248px; /* TODO: Сетка */
+    margin: 0 auto;
+    padding: 72px 0 70px;
+
+    &--index-page {
+      width: 500px;
+      min-height: 206px; /* TODO: Сетка */
+      padding-top: 48px;
+      padding-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 287px; /* TODO: Сетка */
+    padding: 110px 0 72px;
+
+    &--index-page {
+      min-height: 206px; /* TODO: Сетка */
+      padding-top: 48px;
+      padding-bottom: 50px;
+    }
+  }
+}
