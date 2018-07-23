@@ -32,11 +32,25 @@ svg {
 
 /* TODO: Сетка */
 .page {
+  position: relative;
   padding-bottom: 1000px;
   // padding-bottom: 300px;
+
+  &--index {
+    @include body-bg(index);
+  }
+
+  &--media {
+    @include body-bg(photo);
+  }
+
+  &--review {
+    @include body-bg(form);
+  }
 }
 
-.page-header,
+// .page-header,
+// .main-nav,
 .page-footer,
 .page-title,
 .features,

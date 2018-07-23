@@ -7,25 +7,44 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Седона</title>
 </head>
-<body class="page page--index">
+<body class="page page--index no-js">
+  <svg style="display:none;">
+    <symbol id="svg-icon-menu" preserveAspectRatio="none" viewBox="0 0 22.928 21.982">
+      <g>
+        <rect width="22.928" height="3.964"/>
+        <rect y="9.009" width="22.928" height="3.964"/>
+        <rect y="18.018" width="22.928" height="3.964"/>
+      </g>
+    </symbol>
+    <symbol id="svg-icon-cross" preserveAspectRatio="none" viewBox="0 0 22.199 22.199">
+      <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+    </symbol>
+  </svg>
   <header class="page-header page-header--index-page">
     <div class="page-header__logo">
-      <a><img src="http://placehold.it/102x83" alt="City of Sedona"></a>
+      <a><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona"></a>
     </div>
-    <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
-      <span class="visually-hidden">Показать меню</span>
-      <span class="visually-hidden">Скрыть меню</span>
-    </button>
-    <nav class="main-nav">
-      <ul class="main-nav__items main-nav__items--part-1">
-        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
-      </ul>
-      <ul class="main-nav__items main-nav__items--part-2">
-        <li class="main-nav__item"><a class="main-nav__link" href="review.html" >Форма отзыва</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
-      </ul>
+    <nav class="main-nav main-nav--closed">
+      <div class="main-nav__inner">
+        <ul class="main-nav__items main-nav__items--part-1">
+          <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="media.html">Фото и видео</a></li>
+        </ul>
+        <ul class="main-nav__items main-nav__items--part-2">
+          <li class="main-nav__item"><a class="main-nav__link" href="review.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="http://htmlacademy.ru/">HTML academy</a></li>
+        </ul>
+      </div>
+      <button class="main-nav__toggle" type="button">
+        <svg width="23" height="22" class="main-nav__toggle-open"><use xlink:href="#svg-icon-menu"></svg>
+        <svg width="23" height="22" class="main-nav__toggle-close"><use xlink:href="#svg-icon-cross"></svg>
+        <span class="visually-hidden">Показать меню</span>
+        <span class="visually-hidden">Скрыть меню</span>
+      </button>
     </nav>
+    <div class="page-header__back">
+      <img class="page-header__intro" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona">
+    </div>
   </header>
   <main class="page-main">
     <header class="page-title page-title--index-page">
@@ -124,5 +143,6 @@
       </a>
     </p>
   </footer>
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>

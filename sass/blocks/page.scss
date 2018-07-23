@@ -10,19 +10,8 @@
   font-size: $font-size;
   line-height: $line-height;
   font-family: $font-family;
+  text-transform: uppercase;
 
   color: $text-color;
   background-color: $bg-color--outer;
-
-  &--index {
-    @include body-bg(index);
-  }
-
-  &--media {
-    @include body-bg(photo);
-  }
-
-  &--review {
-    @include body-bg(form);
-  }
 }

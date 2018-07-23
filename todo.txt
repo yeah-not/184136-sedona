@@ -1,1 +1,1 @@
-TODO: Fix разметки, сетка страницы Review c form. Fix сетки Video.
+TODO: Page header, Nav - fix разметки, стилизация, javascript. Обновление страниц Media, Review. Перенес дизайн превью bg в base.css.
