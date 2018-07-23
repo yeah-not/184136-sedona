@@ -30,15 +30,21 @@ $heading-color: $color-black;
 $link-color: $color-main--dark;
 
 $font-size: 1.4rem;
-$font-size--h1: 3rem;
-$font-size--h2: 2.1rem;
-$font-size--nav-sm: 1.8rem;
-$line-height: 1.5;
-$line-height--large: 1.7;
-$line-height--xlarge: 1.86;
-$line-height--small: 1.2;
+$font-size--large: 1.8rem;
+$font-size--xlarge: 2.1rem;
+$font-size--xxlarge: 3rem;
+
+$font-size--h1: $font-size--xxlarge;
+$font-size--h1-sm: $font-size--large;
+$font-size--h2: $font-size--xlarge;
+$font-size--h2-sm: $font-size--large;
+
+$line-height: 2.1rem;
+$line-height--large: 2.4rem;
+$line-height--xlarge: 2.6rem;
 $line-height--h1: 1.1;
 $line-height--h2: 1.2;
+
 $font-family: "PT Sans", Arial, sans-serif;
 
 $screen-sm: 320px;

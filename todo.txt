@@ -1,1 +1,1 @@
-TODO: Page header, Nav - fix разметки, стилизация, javascript. Обновление страниц Media, Review. Перенес дизайн превью bg в base.css.
+TODO: Page title - стилизация, fix разметки (страницы Index, Media). Fix стилилей Header. Обновил переменные по шрифтам.

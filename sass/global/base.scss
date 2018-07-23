@@ -47,12 +47,16 @@ svg {
   &--review {
     @include body-bg(form);
   }
+
+  > * {
+    // opacity: 0.3;
+  }
 }
 
 // .page-header,
-// .main-nav,
 .page-footer,
-.page-title,
+// .main-nav,
+// .page-title,
 .features,
 .hotel-search,
 .map,

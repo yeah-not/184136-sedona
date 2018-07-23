@@ -2,37 +2,75 @@
   // @include outline-grid(1); /* TODO: Сетка */
   // ~ * { display: none; } /* TODO: Сетка */
 
-  min-height: 189px; /* TODO: Сетка */
-  padding: 40px $gap-sm 28px;
+  padding: 38px $gap-sm 27px;
+
+  text-align: center;
+
+
+  &__name {
+    margin: 0 0 1.45em;
+
+    font-size: $font-size--h1-sm;
+    line-height: $line-height--xlarge;
+
+    br { display: none; }
+  }
+
+  &__slogan {
+    font-size: $font-size--h2-sm;
+    line-height: $line-height--xlarge;
+    margin: 0 0 29px;
+  }
+
+  &__text {
+    margin: 1em 0 0;
+    line-height: $line-height--large;
+
+    br { display: none; }
+  }
 
   &--index-page {
-    min-height: 223px; /* TODO: Сетка */
-    padding-top: 38px;
-    padding-bottom: 24px;
+    padding-top: 40px;
+    padding-bottom: 28px;
   }
 
   @media (min-width: $screen-md) {
     width: 450px;
-    min-height: 248px; /* TODO: Сетка */
     margin: 0 auto;
-    padding: 72px 0 70px;
+    padding: 74px 0 70px;
+
+
+    &__name {
+      font-size: $font-size--h1;
+      margin-bottom: 1em;
+
+      br { display: block; }
+    }
+
+    &__slogan {
+      font-size: $font-size--h2;
+
+      br { display: none; }
+    }
+
+    &__text {
+      br { display: block; }
+    }
 
     &--index-page {
       width: 500px;
-      min-height: 206px; /* TODO: Сетка */
-      padding-top: 48px;
-      padding-bottom: 50px;
+      padding-top: 50px;
+      padding-bottom: 51px;
     }
   }
 
   @media (min-width: $screen-lg) {
-    min-height: 287px; /* TODO: Сетка */
-    padding: 110px 0 72px;
+    padding: 112px 0 71px;
 
     &--index-page {
       min-height: 206px; /* TODO: Сетка */
-      padding-top: 48px;
-      padding-bottom: 50px;
+      padding-top: 50px;
+      padding-bottom: 51px;
     }
   }
 }
