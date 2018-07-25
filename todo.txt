@@ -1,1 +1,1 @@
-TODO: Page title - стилизация, fix разметки (страницы Index, Media). Fix стилилей Header. Обновил переменные по шрифтам.
+TODO: Features - стилизация, fix разметки (страницы Index, Media). Fix стилилей Page title.

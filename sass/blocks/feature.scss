@@ -1,40 +1,101 @@
 .feature {
   $block: &;
 
-  // @include outline-grid(3); /* TODO: Сетка */
+  // @include outline-grid(3, 1, -1, -1); /* TODO: Сетка */
+
+  background-color: $bg-color--gray;
 
   &__fact {
-    min-height: 168px; /* TODO: Сетка */
-    padding: 29px $gap-sm 27px;
+    padding: 27px 0;
+    margin: 0 $gap-sm;
 
-    * { display: none; } /* TODO: Сетка */
+    text-align: center;
+
+    border-bottom: 1px solid transparentize($color-black, 0.9);
+
+    &--no-last {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 13px;
+
+    font-size: $font-size--h2-sm;
+    line-height: $line-height--xlarge;
+
+    br { display: none; }
+  }
+
+  &__num {
+    order: 2;
+
+    margin: 6px 0 0;
+
+    font-size: $font-size;
+    font-weight: normal;
+
+    &::before,
+    &::after {
+      content: '\00a0\2013\00a0';
+    }
+  }
+
+  &__desc {
+    margin: 10px 0 0;
   }
 
   &__image {
-    min-height: 260px; /* TODO: Сетка */
-
-    img { display: none; } /* TODO: Сетка */
+    img { display: block; }
   }
 
   &__items {
     @include list-reset;
 
-    padding: 26px $gap-sm 20px;
+    padding: 26px $gap-sm 18px;
+
+    color: $text-color;
+    background-color: $bg-color;
   }
 
   &__item {
-    min-height: 110px; /* TODO: Сетка */
-    margin-bottom: 19px;
+    position: relative;
 
-    &:nth-child(2) {
-      min-height: 93px; /* TODO: Сетка */
-    }
+    margin-bottom: 19px;
+    padding-top: 9px;
+    padding-left: 50px;
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  &__item-title {
+    margin: 0 0 14px;
+    font-size: $font-size--h2-sm;
+    line-height: $line-height--xlarge;
+  }
+
+  &__item-desc {
+    margin: 10px 15px 0;
+
+    br { display: none; }
+  }
+
+  &:first-child {
+    padding: 16px 0 0;
   }
 
   &--main {
+
+    color: $text-color--main;
+    background-color: $bg-color--main;
+
     #{$block}__fact {
-      min-height: 191px; /* TODO: Сетка */
-      padding-top: 41px;
+      padding-top: 40px;
       padding-bottom: 39px;
     }
   }
@@ -45,33 +106,66 @@
 
     &__fact {
       width: $col-md;
-      min-height: 256px; /* TODO: Сетка */
-      padding: 47px;
-      // ??? padding: 47px 45px;
+      padding: 45px 50px;
+      margin: 0;
+
+      border: none;
+    }
+
+    &__title {
+      margin-bottom: 19px;
+      font-size: $font-size--h2;
+
+      br { display: block; }
+    }
+
+    &__desc {
+      br { display: block; }
     }
 
     &__image {
       width: $col-md * 2;
-      min-height: 256px; /* TODO: Сетка */
+
+      img {
+        height: $col-md; /* TODO: Картинки */
+        width: 100%; /* TODO: Картинки */
+      }
     }
 
     &__items {
       display: flex;
       order: 3;
 
-      padding: 60px 0 63px;
+      padding: 60px 0 62px;
     }
 
     &__item {
       width: $col-md;
-      min-height: 208px; /* TODO: Сетка */
       margin: 0;
-      padding: 0 45px;
+      padding: 99px 45px 0;
+
+      text-align: center;
+
+      &:nth-child(1) { order: 1; }
+      &:nth-child(2) { order: 3; }
+      &:nth-child(3) { order: 2; }
     }
+
+    &__item-icon {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__item-title {
+      margin-bottom: 21px;
+      font-size: $font-size--h2;
+    }
+
+    &:first-child { padding-top: 0; }
 
     &--main {
       #{$block}__fact {
-        min-height: 256px; /* TODO: Сетка */
+        padding: 45px 45px 40px;
       }
     }
 
@@ -90,11 +184,15 @@
 
     &__fact {
       width: $col-lg;
-      padding: 47px 65px 65px;
+      padding: 46px 65px 65px;
     }
 
     &__image {
       width: $col-lg * 2;
+    }
+
+    &__items {
+      padding-bottom: 82px;
     }
 
     &__item {
@@ -103,8 +201,8 @@
 
     &--main {
       #{$block}__fact {
-        padding-top: 54px;
-        padding-bottom: 60px;
+        padding-top: 53px;
+        padding-bottom: 58px;
       }
     }
   }

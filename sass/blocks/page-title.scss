@@ -30,8 +30,25 @@
   }
 
   &--index-page {
+    position: relative;
+    z-index: 1;
+
     padding-top: 40px;
     padding-bottom: 28px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      bottom: -16px;
+      left: 0;
+
+      width: 100%;
+      height: 37px;
+
+      background: url(../img/bg-triangle.svg) 50% 0 no-repeat;
+    }
   }
 
   @media (min-width: $screen-md) {
@@ -61,6 +78,8 @@
       width: 500px;
       padding-top: 50px;
       padding-bottom: 51px;
+
+      &::after { display: none; }
     }
   }
 
