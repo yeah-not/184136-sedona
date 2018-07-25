@@ -1,1 +1,1 @@
-TODO: Hotel search, Btn - стилизация, fix разметки. Fix стилилей Features.
+TODO: Page footer, social link - стилизация, fix разметки.
