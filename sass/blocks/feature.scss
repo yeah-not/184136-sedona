@@ -6,14 +6,14 @@
   background-color: $bg-color--gray;
 
   &__fact {
-    padding: 27px 0;
+    padding: 26px 0 28px;
     margin: 0 $gap-sm;
 
     text-align: center;
 
     border-bottom: 1px solid transparentize($color-black, 0.9);
 
-    &--no-last {
+    &--last {
       border-bottom: none;
     }
   }
@@ -44,7 +44,9 @@
   }
 
   &__desc {
-    margin: 10px 0 0;
+    margin: 10px 15px 0;
+
+    br { display: none; }
   }
 
   &__image {
@@ -80,7 +82,7 @@
   }
 
   &__item-desc {
-    margin: 10px 15px 0;
+    margin: 10px 0 0;
 
     br { display: none; }
   }
@@ -96,7 +98,12 @@
 
     #{$block}__fact {
       padding-top: 40px;
-      padding-bottom: 39px;
+      padding-bottom: 38px;
+    }
+
+    #{$block}__desc {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -120,6 +127,8 @@
     }
 
     &__desc {
+      margin-left: 0;
+      margin-right: 0;
       br { display: block; }
     }
 

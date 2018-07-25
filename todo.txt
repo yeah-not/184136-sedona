@@ -1,1 +1,1 @@
-TODO: Features - стилизация, fix разметки (страницы Index, Media). Fix стилилей Page title.
+TODO: Hotel search, Btn - стилизация, fix разметки. Fix стилилей Features.

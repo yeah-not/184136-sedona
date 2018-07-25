@@ -24,7 +24,8 @@ $text-color--main: $color-white;
 $bg-color: $color-white;
 $bg-color--outer: $color-gray--lightest;
 $bg-color--main: $color-main;
-$bg-color--gray: $color-gray--lighter-2;
+$bg-color--gray: $color-gray--lighter;
+$bg-color--gray-light: $color-gray--lightest;
 
 $heading-color: $color-black;
 $link-color: $color-main--dark;
@@ -42,8 +43,6 @@ $font-size--h2-sm: $font-size--large;
 $line-height: 2.1rem;
 $line-height--large: 2.4rem;
 $line-height--xlarge: 2.6rem;
-$line-height--h1: 1.1;
-$line-height--h2: 1.2;
 
 $font-family: "PT Sans", Arial, sans-serif;
 
