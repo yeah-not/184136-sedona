@@ -2,12 +2,12 @@
   $block: &;
   $border: 1px solid $color-gray--lighter;
 
-  padding: 23px 20px 15px;
+  padding: 23px 20px 17px;
   border-bottom: $border;
 
   &__image {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     img { display: block; }
   }

@@ -25,6 +25,12 @@ svg {
 	overflow: hidden;
 }
 
+.no-focus {
+  a,
+  button,
+  input[type="submit"] { outline: none; }
+}
+
 
 
 
@@ -61,7 +67,7 @@ svg {
 // .hotel-search,
 .map,
 // .gallery,
-.video,
+// .video,
 .test {
   @include outline(-1);
   img { display: none; }

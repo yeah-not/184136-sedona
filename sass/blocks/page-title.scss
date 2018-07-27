@@ -2,7 +2,7 @@
   // @include outline-grid(1); /* TODO: Сетка */
   // ~ * { display: none; } /* TODO: Сетка */
 
-  padding: 38px $gap-sm 27px;
+  padding: 38px ($gap-sm + 5) 27px;
 
   text-align: center;
 
@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $screen-md) {
-    width: 450px;
+    width: 440px;
     margin: 0 auto;
     padding: 75px 0 69px;
 

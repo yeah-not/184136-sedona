@@ -14,7 +14,6 @@
   background-color: $bg-color--gray;
   border: none;
 
-  &:focus,
   &:hover {
     background-color: $color-gray--lightest;
   }
@@ -36,7 +35,6 @@
     color: $text-color--main;
     background-color: $bg-color--main;
 
-    &:focus,
     &:hover {
       background-color: $color-main--dark;
     }

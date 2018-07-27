@@ -1,1 +1,1 @@
-TODO: Страница Media - Gallery (с Likes) - стилизация, fix разметки, fix Page title.
+TODO: Страница Media - Video - стилизация, fix разметки, fix Page title. Fix остающийся focus на кнопках после клика, удалил focus=hover стилизацию.
