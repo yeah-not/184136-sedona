@@ -1,0 +1,21 @@
+.likes {
+  $block: &;
+
+  &__toggle {
+    display: inline-block;
+
+    padding: 0;
+    margin-right: 10px;
+
+    vertical-align: top;
+
+    border: none;
+    background: none;
+  }
+
+  &__num {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+}
