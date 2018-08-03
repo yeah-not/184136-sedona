@@ -1,70 +1,168 @@
 .form {
   $block: &;
+  $border-color: $color-gray--lighter;
 
-  @include outline-grid(2,1,-1); /* TODO: Сетка */
+  // @include outline-grid(3,1,-1, -1); /* TODO: Сетка */
 
   &__set {
 
-    padding: 20px $gap-sm 28px;
+    padding: 17px $gap-sm 25px;
     margin: 0;
 
     border: none;
+    border-top: 1px solid $border-color;
 
-    &:nth-child(1) { min-height: 304px; }
-    &:nth-child(2) { min-height: 317px; }
-    &:nth-child(3) { min-height: 289px; }
-    &:nth-child(4) { min-height: 409px; }
-    &:nth-child(5) { min-height: 250px; }
+    /* TODO: Сетка */
+    // &:nth-child(1) { min-height: 304px; }
+    // &:nth-child(2) { min-height: 317px; }
+    // &:nth-child(3) { min-height: 289px; }
+    // &:nth-child(4) { min-height: 409px; }
+    // &:nth-child(5) { min-height: 250px; }
+    /* EO TODO: Сетка */
+  }
+
+  &__title {
+    display: block;
+
+    color: $color-black;
+    font-size: $font-size--h2-sm;
+    line-height: $line-height--xlarge;
+    font-weight: bold;
+    text-align: center;
+
+    margin: 0 0 25px;
+    padding: 0;
   }
 
   &__footer {
-    min-height: 118px;
     padding: 23px $gap-sm 37px;
+  }
+
+  &__actions {
+    margin: 0;
+  }
+
+  &__notice--bottom {
+    margin: -10px 0 15px;
   }
 
   @media (min-width: $screen-md) {
     display: flex;
     flex-wrap: wrap;
 
+    padding-top: 70px;
+    margin-top: -60px;
+
     &__set {
       width: 100%;
       padding: 0 $gap-md;
       margin-bottom: 80px;
 
+      border: none;
+
       &:last-of-type {
         margin-bottom: 58px;
       }
 
-      &--half-width {
+      &--1-of-2 {
         width: 50%;
+
+        #{$block}__title {
+          padding: 0;
+          text-align: left;
+
+          &::before,
+          &::after { display: none; }
+        }
       }
 
-      &:nth-child(1),
-      &:nth-child(2) { min-height: 298px; }
-      &:nth-child(3) { min-height: 241px; }
-      &:nth-child(4) { min-height: 213px; }
-      &:nth-child(5) { min-height: 230px; }
+      &--separator {
+        border-right: 1px solid $border-color;
+      }
+    }
+
+    &__set-inner {
+      position: relative;
+      padding-top: 70px;
+    }
+
+    &__title {
+      position: absolute;
+      top: 0; left: 0;
+      transform: translateY(-50%);
+
+      width: 100%;
+      padding: 0 140px;
+      margin: 0;
+
+      font-size: $font-size--h2;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%; left: 0;
+
+        width: 125px;
+        height: 1px;
+
+        background-color: $border-color;
+      }
+
+      &::after {
+        left: auto;
+        right: 0;
+      }
     }
 
     &__footer {
+      display: flex;
+      justify-content: space-between;
+
       width: 100%;
-      min-height: 58px; /* TODO: Сетка */
       padding: 0 $gap-md;
       margin-bottom: 51px;
     }
 
-    @media (min-width: $screen-lg) {
-      &__set {
-        padding: 0 $gap-lg;
+    &__actions {
+      order: 1;
+      width: 50%;
+    }
 
-        &:nth-child(3) { min-height: 144px; }
-        &:nth-child(4) { min-height: 123px; }
-      }
+    &__notice--bottom {
+      display: flex;
+      order: 2;
+      align-items: center;
+      justify-content: flex-end;
 
-      &__footer {
-        padding: 0 $gap-lg;
-        margin-bottom: 57px;
+      width: 196px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    $set-gap: 80px;
+    padding-left: ($gap-lg - $set-gap);
+    padding-right: ($gap-lg - $set-gap);
+
+    &__set {
+      padding: 0 $set-gap;
+
+      &--1-of-2 { padding-right: 80px; }
+      &--2-of-2 { padding-left: 80px; }
+    }
+
+    &__title {
+      padding: 0 295px;
+      &::before,
+      &::after {
+        width: 280px;
       }
+    }
+
+    &__footer {
+      padding: 0 $set-gap;
+      margin-bottom: 57px;
     }
   }
 }

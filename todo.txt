@@ -1,1 +1,1 @@
-TODO: Страница Media - Video - стилизация, fix разметки, fix Page title. Fix остающийся focus на кнопках после клика, удалил focus=hover стилизацию.
+TODO: Страница Rewiew - Форма и ее элементы - стилизация, fix разметки, fix Page title. SVG иконки обновил на всех страницах.
