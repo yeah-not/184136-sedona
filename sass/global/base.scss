@@ -25,6 +25,12 @@ svg {
 	overflow: hidden;
 }
 
+.no-focus {
+  a,
+  button,
+  input[type="submit"] { outline: none; }
+}
+
 
 
 
@@ -32,18 +38,36 @@ svg {
 
 /* TODO: Сетка */
 .page {
+  position: relative;
   padding-bottom: 1000px;
   // padding-bottom: 300px;
+
+  &--index {
+    @include body-bg(index);
+  }
+
+  &--media {
+    @include body-bg(photo);
+  }
+
+  &--review {
+    @include body-bg(form, __modal);
+  }
+
+  > * {
+    // opacity: 0.5;
+  }
 }
 
-.page-header,
-.page-footer,
-.page-title,
-.features,
-.hotel-search,
+// .page-header,
+// .page-footer,
+// .main-nav,
+// .page-title,
+// .features,
+// .hotel-search,
 .map,
-.gallery,
-.video,
+// .gallery,
+// .video,
 .test {
   @include outline(-1);
   img { display: none; }

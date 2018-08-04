@@ -2,10 +2,9 @@
   $block: &;
 
   // @include outline-grid(3); /* TODO: Сетка */
+  // @include outline-grid(3, 1, -1, -1); /* TODO: Сетка */
   // ~ * { display: none; } /* TODO: Сетка */
 
-
-  border-top: 1px solid #000; /* TODO: Сетка */
 
   @media (min-width: $screen-md) {
     display: flex;

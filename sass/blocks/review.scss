@@ -1,27 +1,114 @@
 .review {
   $block: &;
   // @include outline-grid(3); /* TODO: Сетка */
+  // @include outline-grid(3, 1, -1, -1); /* TODO: Сетка */
 
   &__title {
-    min-height: 204px; /* TODO: Сетка */
     padding-bottom: 17px;
-
-    > * { display: none; } /* TODO: Сетка */
+    padding-left: $gap-sm;
+    padding-right: $gap-sm;
   }
 
   @media (min-width: $screen-md) {
 
     &__title {
-      min-height: 254px; /* TODO: Сетка */
       padding-bottom: 76px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__impression {
+      order: 1;
+
+      padding-top: 4px;
+      padding-right: 50px;
+    }
+    &__full-name { order: 2; }
+    &__contacts { order: 3; }
+    &__sights { order: 4; }
+    &__emotions { order: 5; }
+    &__footer { order: 6; }
+
+    &__contacts-field {
+      margin-top: -30px;
+    }
+
+    &__sights-field { padding: 0 95px; }
+
+    &__sights-checkboxes {
+      column-count: 2;
+      column-gap: 55px;
     }
   }
 
   @media (min-width: $screen-lg) {
 
-    &__title {
-      min-height: 274px; /* TODO: Сетка */
-      padding-bottom: 61px;
+    &__title { padding-bottom: 61px; }
+
+    &__impression {
+
+      #{$block}__impression-title { padding-left: 74px; }
+    }
+
+    &__contacts-field {
+      display: flex;
+      margin-top: 17px;
+    }
+
+    &__contacts-text-field {
+      display: flex;
+      align-items: baseline;
+
+      width: 50%;
+
+      .field-text__name {
+        width: auto;
+        margin-right: 15px;
+        margin-left: 0;
+
+        white-space: nowrap;
+
+        span { display: none; }
+      }
+
+      .field-text__input-wrap { width: 100%; }
+
+      .field-text__notice {
+        width: auto;
+        left: 0;
+
+        text-align: left;
+      }
+
+      &:nth-child(odd) { padding-right: 80px; }
+    }
+
+    &__sights-field {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__sights-checkboxes {
+      display: flex;
+      justify-content: space-between;
+
+      column-count: auto;
+
+      .field-checkbox__name {
+        display: inline-block;
+        margin-right: 50px;
+
+        &:last-of-type { margin-right: 0; }
+      }
+    }
+
+    &__emotions-text-area {
+
+      .field-text__notice {
+        width: auto;
+        left: 0;
+        text-align: left;
+      }
     }
   }
 }

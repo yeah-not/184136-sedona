@@ -1,0 +1,82 @@
+.field-radio {
+  $block: &;
+  $indicator-radius: 50px;
+  $margin-bottom: 18px;
+  @include field-notice($block);
+
+
+  &__inner {
+    margin: 0;
+    margin-bottom: -$margin-bottom;
+  }
+
+  &__name {
+    display: block;
+    position: relative;
+    margin-bottom: $margin-bottom;
+  }
+
+  &__input {
+    position: absolute;
+    z-index: 1;
+    top: 0; left: 0;
+
+    width: $indicator-radius;
+    height: $indicator-radius;
+
+    opacity: 0;
+
+    &:checked + #{$block}__text:after { display: block; }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    color: $color-black;
+    font-size: $font-size--large;
+    line-height: $line-height--xlarge;
+    text-transform: none;
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      align-self: start;
+
+      width: $indicator-radius;
+      height: $indicator-radius;
+      margin-right: 24px;
+
+      background-color: $color-gray--lightest;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      display: none;
+      position: absolute;
+      top: $indicator-radius / 2;
+      left: $indicator-radius / 2;
+      transform: translate(-50%, -50%);
+
+      width: 21px;
+      height: 21px;
+
+      background-color: $color-gray--darkest;
+      border-radius: 50%;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    $margin-bottom: 28px;
+
+    &__inner {
+      margin-bottom: -$margin-bottom;
+    }
+
+    &__name {
+      margin-bottom: $margin-bottom;
+    }
+  }
+}

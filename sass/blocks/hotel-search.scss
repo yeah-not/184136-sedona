@@ -2,20 +2,54 @@
   $block: &;
 
   // @include outline-grid(1); /* TODO: Сетка */
-  // ~ * { display: none; } /* TODO: Сетка */
+  // @include outline-grid(1, 1, -1, -1); /* TODO: Сетка */
 
-  min-height: 286px; /* TODO: Сетка */
-  padding: 30px $gap-sm 50px;
+  // min-height: 286px; /* TODO: Сетка */
+  padding: 28px $gap-sm 48px;
+  text-align: center;
+
+  &__title {
+    margin: 0 0 19px;
+
+    font-size: $font-size--xlarge;
+    line-height: $line-height--xlarge;
+  }
+
+  &__desc {
+    margin: 10px 0 0;
+    line-height: $line-height--large;
+
+    br { display: none; }
+  }
+
+  &__find {
+    margin: 35px 0 0;
+  }
 
   @media (min-width: $screen-md) {
-    width: 458px;
-    min-height: 317px; /* TODO: Сетка */
+    width: 460px;
     margin: 0 auto;
-    padding: 58px 0;
+    padding: 54px 0 58px;
+
+    &__title {
+      margin-bottom: 31px;
+      font-size: $font-size--xxlarge;
+    }
+
+    &__desc {
+      br { display: block; }
+    }
+
+    &__find {
+      margin-top: 42px;
+    }
   }
 
   @media (min-width: $screen-lg) {
-    min-height: 330px; /* TODO: Сетка */
     padding-bottom: 66px;
+
+    &__find {
+      margin-top: 47px;
+    }
   }
 }

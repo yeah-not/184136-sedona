@@ -1,67 +1,115 @@
 .page-footer {
   $block: &;
+  // @include outline-grid(2, 1, -1, -1); /* TODO: Сетка */
   @include container;
 
-  // @include outline-grid(2); /* TODO: Сетка */
-
-  padding: 26px $gap-sm 23px;
-  margin-top: 10px;
+  padding: 37px $gap-sm 23px;
+  background: $bg-color;
 
   &__link {
-    min-height: 26px; /* TODO: Сетка */
     margin: 0 0 36px;
+
+    font-size: $font-size--xlarge;
+    line-height: $line-height--xlarge;
+    font-weight: bold;
+    text-align: center;
   }
 
   &__social {
-    min-height: 48px; /* TODO: Сетка */
     margin: 0 0 40px;
+
+    text-align: center;
   }
 
   &__copyright {
-    min-height: 34px; /* TODO: Сетка */
+    margin: 0;
+    text-align: center;
+  }
+
+  &__copyright-link {
+    line-height: $line-height--xlarge;
+    text-decoration: none;
+
+    color: $color-black;
+
+    &:hover {
+      color: $color-main;
+
+      #{$block}__copyright-icon {
+        fill: $bg-color--main;
+      }
+    }
+
+    &:active {
+      color: transparentize($color-black, 0.7);
+
+      #{$block}__copyright-icon {
+        fill: transparentize($color-black, 0.7);
+      }
+    }
+  }
+
+  &__copyright-text {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 9px;
+  }
+
+  &__copyright-icon {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   @media (min-width: $screen-md) {
+    $item-padding: 0 15px;
     display: flex;
     align-items: center;
 
-    padding: 36px 0;
+    padding: 35px 0;
 
     &__link {
       width: $col-md;
       margin: 0;
-      padding: 0 15px;
+      padding: $item-padding;
       padding-left: $gap-md;
+
+      text-align: left;
     }
 
     &__social {
       width: $col-md;
       margin: 0;
-      padding: 0 15px;
+      padding: $item-padding;
     }
 
     &__copyright{
       width: $col-md;
-      padding: 0 15px;
+      padding: $item-padding;
       padding-right: $gap-md;
+
+      text-align: right;
     }
   }
 
   @media (min-width: $screen-lg) {
+    $item-padding: 0 30px;
 
     &__link {
       width: $col-lg;
-      padding: 0 30px;
+      padding: $item-padding;
+
+      text-align: center;
     }
 
     &__social {
       width: $col-lg;
-      padding: 0 30px;
+      padding: $item-padding;
     }
 
     &__copyright {
       width: $col-lg;
-      padding: 0 30px;
+      padding: $item-padding;
       padding-right: 45px;
     }
   }

@@ -1,9 +1,5 @@
 .features {
   $block: &;
-  
-  // & ~ * { display: none; }
-
-  padding-top: 18px;
 
   @media (min-width: $screen-md) {
     display: flex;

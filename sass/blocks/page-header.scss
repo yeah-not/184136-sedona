@@ -4,19 +4,18 @@
 
   // @include outline-grid(3); /* TODO: Сетка */
   // ~ * { display: none; } /* TODO: Сетка */
+  // opacity: 0.3;
 
   display: flex;
   flex-direction: column;
-
   position: relative;
-
-  padding-bottom: 159px;
 
   &__logo {
     order: 2;
     position: relative;
 
     height: 56px;
+    background-color: $bg-color;
 
     a {
       display: block;
@@ -24,22 +23,43 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
 
-      width: 102px; /* TODO: Сетка */
-      height: 83px; /* TODO: Сетка */
+    img { display: block; }
+  }
+
+  &__back {
+    order: 3;
+
+    height: 158px;
+    padding-top: 52px;
+
+    text-align: center;
+
+    background: #deedf5 url(../img/bg-back-mobile@1x.jpg) 50% 100% no-repeat;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+
+      width: 100%;
+      height: 26px;
+
+      background: url(../img/bg-intro-triangle-mobile.svg) 50% 0 no-repeat;
+      background-size: cover; /* TODO: Картинки */
     }
   }
 
-  &__nav-toggle {
-    display: none; /* TODO: Сетка */
-  }
-
   &--index-page {
-    padding-bottom: 390px;
+
+    #{$block}__back {
+      height: 389px;
+      padding-top: 90px;
+    }
   }
 
   @media (min-width: $screen-md) {
-    padding-bottom: 290px;
 
     &__logo {
       position: static;
@@ -48,25 +68,66 @@
       height: 0;
     }
 
-    &__nav-toggle {
-      display: none;
+    &__back {
+      height: 290px;
+      padding-top: 95px;
+
+      &::after {
+        height: 57px;
+      }
+    }
+
+    &__intro {
+      width: 458px;
+      height: 78px;
     }
 
     &--index-page {
-      padding-bottom: 518px;
+
+      #{$block}__back {
+        height: 518px;
+        padding-top: 77px;
+
+        background-size: cover; /* TODO: Картинки */
+      }
+
+      #{$block}__intro {
+        width: 460px;
+        height: 350px;
+      }
     }
   }
 
   @media (min-width: $screen-lg) {
-    padding-bottom: 301px;
 
-    &__logo a {
-      width: 187px; /* TODO: Картинки */
+    &__logo img {
+      width: 188px; /* TODO: Картинки */
       height: 96px; /* TODO: Картинки */
     }
 
+    &__back {
+      height: 301px;
+      padding-top: 100px;
+
+      background-size: cover; /* TODO: Картинки */
+    }
+
+    &__intro {
+      width: 461px;
+      height: 80px;
+    }
+
     &--index-page {
-      padding-bottom: 518px;
+
+      #{$block}__back {
+        height: 518px;
+        padding-top: 78px;
+      }
+
+      #{$block}__intro {
+        width: 460px;
+        height: 350px;
+      }
     }
   }
 }

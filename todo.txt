@@ -1,1 +1,3 @@
-TODO: Fix разметки, сетка страницы Review c form. Fix сетки Video.
+TODO: Страница Review - Modal failure & success - стилизация, сетка, разметка. Fix Footer (отступ).
+
+TODO: JS Modal, Form

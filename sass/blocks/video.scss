@@ -1,35 +1,104 @@
 .video {
   $block: &;
+  $contorls-padding-x: 23px;
   // @include outline-grid(3); /* TODO: Сетка */
-  margin-bottom: 39px;
+  // @include outline-grid(3, 1, -1, -1); /* TODO: Сетка */
+  margin-bottom: 40px;
 
 
   &__title {
-    min-height: 192px; /* TODO: Сетка */
-    padding-top: 35px;
+    // min-height: 192px; /* TODO: Сетка */
+    padding-top: 33px;
     padding-bottom: 35px;
-
-    > * { display: none; } /* TODO: Сетка */
   }
 
   &__content {
     display: block;
 
-    width: 100%; /* TODO: Сетка */
-    height: 200px; /* TODO: Сетка */
+    width: 100%;
+    height: 200px;
+
+    background: url(http://placehold.it/320x200) 50% 0 no-repeat;
+    background-size: cover; /* TODO: Картинки */
   }
 
   &__controls {
-    min-height: 111px; /* TODO: Сетка */
-    margin-top: -45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    height: 66px;
+    padding: 0 $contorls-padding-x;
+    margin: 0 $gap-sm 0;
+
+    background-color: $color-gray--lightest;
+  }
+
+  &__volume {
+    display: flex;
+    position: absolute;
+    top: 0; left: 0;
+    transform: translateY(-100%);
+
+    width: 100%;
+    padding: 22px $contorls-padding-x 20px;
+
+    background-color: transparentize($color-black, 0.4);
+  }
+
+  &__volume-bar {
+    position: relative;
+
+    height: 3px;
+    width: 100%;
+
+    background-color: transparentize($color-white, 0.8);
+  }
+
+  &__volume-marker {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    width: 9px;
+    height: 9px;
+
+    background-color: $color-white;
+    border-radius: 50%;
+  }
+
+  &__btn {
+    display: block;
+    padding: 0;
+
+    line-height: 0;
+
+    background: none;
+    border: none;
+
+    &--subtitles {
+      margin-left: auto;
+      margin-right: 31px;
+    }
+
+    svg { fill: $color-main--darkest; }
+
+    &:hover {
+      svg { fill: $color-gray--darkest; }
+    }
+
+    &:active {
+      opacity: 0.3;
+      svg { fill: $color-gray--darkest; }
+    }
   }
 
   @media (min-width: $screen-md) {
-    margin-bottom: 30px;
 
     &__title {
-      min-height: 243px; /* TODO: Сетка */
-      padding-top: 65px;
+      padding-top: 67px;
       padding-bottom: 73px;
     }
 
@@ -38,25 +107,50 @@
     }
 
     &__content {
-      height: 500px; /* TODO: Сетка */
+      height: 500px;
     }
 
     &__controls {
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
 
       width: 100%;
-      min-height: 93px; /* TODO: Сетка */
+      height: 93px;
       margin: 0;
+      padding-left: 35px;
+      padding-right: 41px;
+
+      background-color: transparentize($color-black, 0.4);
+    }
+
+    &__volume {
+      position: static;
+      transform: none;
+
+      width: 389px;
+      padding: 0;
+      margin-left: 10px;
+
+      background-color: transparent;
+    }
+
+    &__btn {
+
+      svg { fill: $color-white; }
+
+      &--subtitles {
+        margin-right: 0;
+        margin-left: 15px;
+      }
     }
   }
 
   @media (min-width: $screen-lg) {
-    margin-bottom: 75px;
+    margin-bottom: 87px;
 
     &__title {
-      min-height: 245px; /* TODO: Сетка */
-      padding-top: 68px;
+      padding-top: 71px;
       padding-bottom: 71px;
     }
 
@@ -65,8 +159,13 @@
       margin: 0 auto;
     }
 
-    &__content {
+    &__volume {
+      width: 540px;
+    }
 
+    &__btn {
+
+      &--subtitles { margin-left: 8px; }
     }
   }
 }

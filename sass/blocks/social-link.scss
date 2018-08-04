@@ -1,0 +1,34 @@
+.social-link {
+  $block: &;
+  display: inline-block;
+  position: relative;
+
+  width: 46px;
+  height: 48px;
+  margin-left: 2px;
+
+  text-decoration: none;
+  vertical-align: top;
+
+  color: $text-color--main;
+  background-color: $bg-color--main;
+
+  &__icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:first-of-type { margin-left: 0; }
+
+  &:hover {
+    background-color: $color-main--dark;
+  }
+
+  &:active {
+    color: transparentize($text-color--main, 0.7);
+    background-color: $color-main--darker;
+
+    #{$block}__icon { opacity: 0.3; }
+  }
+}

@@ -1,3 +1,5 @@
 .page-main {
   @include container;
+
+  background: $bg-color;
 }

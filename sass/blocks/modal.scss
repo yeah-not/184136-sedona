@@ -1,0 +1,120 @@
+.modal {
+  $block: &;
+  $padding-x: 50px;
+
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+
+  &__inner {
+    position: absolute;
+
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: $container-sm;
+    padding: 39px 0 0;
+
+    background-color: $bg-color;
+    box-shadow: 0 7px 15px transparentize($color-black, 0.85);
+    outline: 1px solid blue; /* TODO: Сетка */
+  }
+
+  &__title {
+    margin: 0 0 26px;
+    padding: 0 $padding-x;
+
+    font-size: $font-size--h1-sm;
+    line-height: $line-height--h1-sm;
+    text-align: center;
+
+    br { display: none; }
+  }
+
+  &__text {
+    margin: 0 0 22px;
+    padding: 0 $padding-x;
+
+    line-height: $line-height--large;
+    text-align: center;
+
+    p { margin: 10px 0 0; }
+  }
+
+  &__actions {
+    padding: 0 70px 35px;
+  }
+
+  &__btn {
+    font-size: $font-size--large;
+  }
+
+  &--failure { }
+
+  &--success {
+
+    #{$block}__text {
+      margin-bottom: 36px;
+    }
+
+    #{$block}__actions {
+      padding: 20px;
+      background-color: $color-gray--lightest;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    $padding-x: 60px;
+
+    &__inner {
+      width: 400px;
+      padding-top: 55px;
+    }
+
+    &__title {
+      margin-bottom: 23px;
+      padding: 0 $padding-x;
+
+      font-size: $font-size--h1;
+      line-height: $line-height--h1;
+
+      br { display: block; }
+    }
+
+    &__text {
+      padding: 0 $padding-x;
+      margin-bottom: 34px;
+    }
+
+    &__actions {
+      padding: 0 64px 47px;
+    }
+
+    &__btn {
+      font-size: $font-size--xlarge;
+    }
+
+    &--success {
+
+      $padding-x: 110px;
+
+      #{$block}__inner {
+        width: 640px;
+      }
+
+      #{$block}__title {
+        padding: 0 $padding-x;
+      }
+
+      #{$block}__text {
+        padding: 0 $padding-x;
+      }
+
+      #{$block}__actions {
+        padding: 44px 91px;
+      }
+    }
+  }
+}
