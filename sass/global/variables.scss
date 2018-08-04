@@ -43,6 +43,10 @@ $font-size--h2-sm: $font-size--large;
 $line-height: 2.1rem;
 $line-height--large: 2.4rem;
 $line-height--xlarge: 2.6rem;
+$line-height--xxlarge: 4rem;
+
+$line-height--h1: $line-height--xxlarge;
+$line-height--h1-sm: $line-height--xlarge;
 
 $font-family: "PT Sans", Arial, sans-serif;
 

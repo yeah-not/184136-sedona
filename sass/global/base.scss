@@ -51,7 +51,7 @@ svg {
   }
 
   &--review {
-    @include body-bg(form);
+    @include body-bg(form, __modal);
   }
 
   > * {

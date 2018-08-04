@@ -1,1 +1,3 @@
-TODO: Страница Rewiew - Форма и ее элементы - стилизация, fix разметки, fix Page title. SVG иконки обновил на всех страницах.
+TODO: Страница Review - Modal failure & success - стилизация, сетка, разметка. Fix Footer (отступ).
+
+TODO: JS Modal, Form

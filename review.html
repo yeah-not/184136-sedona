@@ -83,7 +83,7 @@
           <div class="form__set-inner">
             <legend class="form__title">Представьтесь:</legend>
             <div class="form__field field-text__wrap">
-              <p class="field-text field-text--inline field-text--error">
+              <p class="field-text field-text--inline">
                 <label class="field-text__name" for="review_first_name">Имя*:</label>
                 <span class="field-text__input-wrap">
                   <input class="field-text__input" type="text" name="first_name" id="review_first_name" value="" placeholder="Петр" required>
@@ -111,7 +111,7 @@
           <div class="form__set-inner">
             <legend class="form__title">Контактная информация:</legend>
             <div class="review__contacts-field form__field field-text__wrap">
-              <p class="review__contacts-text-field field-text field-text--error">
+              <p class="review__contacts-text-field field-text">
                 <label class="field-text__name" for="review_phone"><span>Контактный </span>телефон*:</label>
                 <span class="field-text__input-wrap">
                   <span class="field-text__icon-wrap">
@@ -232,6 +232,28 @@
       </a>
     </p>
   </footer>
+  <section class="modal modal--success">
+    <div class="modal__inner">
+      <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+      <div class="modal__text">
+        <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal__actions">
+        <button class="modal__btn btn btn--primary btn--full-width">Закрыть окно</button>
+      </div>
+    </div>
+  </section>
+  <section class="modal modal--failure">
+    <div class="modal__inner">
+      <h2 class="modal__title">Что-то пошло<br> не так!</h2>
+      <div class="modal__text">
+        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="modal__actions">
+        <button class="modal__btn btn btn--primary btn--full-width">Ok</button>
+      </div>
+    </div>
+  </section>
   <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>

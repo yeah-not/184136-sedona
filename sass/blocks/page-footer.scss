@@ -3,10 +3,7 @@
   // @include outline-grid(2, 1, -1, -1); /* TODO: Сетка */
   @include container;
 
-
-  padding: 27px $gap-sm 23px;
-  margin-top: 10px;
-
+  padding: 37px $gap-sm 23px;
   background: $bg-color;
 
   &__link {
@@ -69,7 +66,7 @@
     display: flex;
     align-items: center;
 
-    padding: 25px 0 36px;
+    padding: 35px 0;
 
     &__link {
       width: $col-md;

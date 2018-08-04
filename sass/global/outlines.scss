@@ -9,7 +9,7 @@ $aquamarine:    #7FFFD4;
 $blue-violet:   #8A2BE2;
 
 // Превью дизайна
-@mixin body-bg($page: index, $top: 0, $overlap: 0, $opacity: 0.75, $path: "../design/preview/", $project: sedona, $min-height: 1000px) {
+@mixin body-bg($page: index, $suffix: "", $top: 0, $overlap: 0, $opacity: 0.75, $path: "../design/preview/", $project: sedona, $min-height: 1000px) {
   position: relative;
 
   &::before {
@@ -26,15 +26,15 @@ $blue-violet:   #8A2BE2;
 
 
 
-    background: url("#{$path}/#{$project}-#{$page}-mobile.jpg") 50% 0 no-repeat;
+    background: url("#{$path}/#{$project}-#{$page}-mobile#{$suffix}.jpg") 50% 0 no-repeat;
     opacity: $opacity;
 
     @media (min-width: $screen-md) {
-      background-image: url("#{$path}/#{$project}-#{$page}-tablet.jpg");
+      background-image: url("#{$path}/#{$project}-#{$page}-tablet#{$suffix}.jpg");
     }
 
     @media (min-width: $screen-lg) {
-      background-image: url("#{$path}/#{$project}-#{$page}-desktop.jpg");
+      background-image: url("#{$path}/#{$project}-#{$page}-desktop#{$suffix}.jpg");
     }
   }
 }
