@@ -1,3 +1,4 @@
-TODO: Страница Review - Modal failure & success - стилизация, сетка, разметка. Fix Footer (отступ).
+TODO: Адаптивная графика Header, Main Nav. Исправил svg файлы (preserveAspectRatio, fill).
 
 TODO: JS Modal, Form
+TODO: JS, Анимация Nav
