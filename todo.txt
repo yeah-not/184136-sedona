@@ -1,4 +1,4 @@
-TODO: Адаптивная графика Map, стилизация.
+TODO: Адаптивная графика Footer & Social link. Обновление страниц Media, Review (Header, Footer, svg).
 
 TODO: Map
 TODO: JS Modal, Form
