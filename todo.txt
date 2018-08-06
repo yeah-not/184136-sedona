@@ -1,4 +1,4 @@
-TODO: Адаптивная графика Header, Main Nav. Исправил svg файлы (preserveAspectRatio, fill).
+TODO: Адаптивная графика Features, исправил jpg файлы (размеры).
 
 TODO: JS Modal, Form
 TODO: JS, Анимация Nav
