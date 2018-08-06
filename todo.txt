@@ -1,4 +1,5 @@
-TODO: Адаптивная графика Features, исправил jpg файлы (размеры).
+TODO: Адаптивная графика Map, стилизация.
 
+TODO: Map
 TODO: JS Modal, Form
 TODO: JS, Анимация Nav
