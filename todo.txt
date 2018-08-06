@@ -1,3 +1,5 @@
-TODO: Страница Review - Modal failure & success - стилизация, сетка, разметка. Fix Footer (отступ).
+TODO: Адаптивная графика страницы Media & Gallery Photo, Video, Likes. Обновление страниц Media, Index (svg).
 
+TODO: Map
 TODO: JS Modal, Form
+TODO: JS, Анимация Nav

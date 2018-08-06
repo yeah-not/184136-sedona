@@ -13,23 +13,43 @@
   &__logo {
     order: 2;
     position: relative;
+    z-index: 1;
 
     height: 56px;
     background-color: $bg-color;
-
-    a {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    img { display: block; }
   }
+
+  &__logo-link {
+    display: block;
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 102px;
+    height: 83px;
+  }
+
+  &__logo-image {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+
+    max-width: none;
+  }
+
+  &__logo-triangle { fill: $color-main; }
+
+  &__logo-triangle,
+  &__logo-clouds,
+  &__logo-bridge { display: none; }
 
   &__back {
     order: 3;
+    overflow: hidden;
+    position: relative;
 
     height: 158px;
     padding-top: 52px;
@@ -37,17 +57,23 @@
     text-align: center;
 
     background: #deedf5 url(../img/bg-back-mobile@1x.jpg) 50% 100% no-repeat;
+    background-size: 768px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../img/bg-back-mobile@2x.jpg);
+    }
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 0; left: 0;
+      z-index: 1;
+      bottom: 0;
+      left: -1px; right: -1px;
 
-      width: 100%;
       height: 26px;
 
       background: url(../img/bg-intro-triangle-mobile.svg) 50% 0 no-repeat;
-      background-size: cover; /* TODO: Картинки */
+      background-size: 100%;
     }
   }
 
@@ -68,12 +94,21 @@
       height: 0;
     }
 
+    &__logo-clouds { display: inline; }
+
     &__back {
       height: 290px;
       padding-top: 95px;
 
+      background-image: url(../img/bg-back-tablet@1x.jpg);
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url(../img/bg-back-tablet@2x.jpg);
+      }
+
       &::after {
         height: 57px;
+        background-image: url(../img/bg-intro-triangle-tablet.svg);
       }
     }
 
@@ -87,8 +122,6 @@
       #{$block}__back {
         height: 518px;
         padding-top: 77px;
-
-        background-size: cover; /* TODO: Картинки */
       }
 
       #{$block}__intro {
@@ -100,16 +133,33 @@
 
   @media (min-width: $screen-lg) {
 
-    &__logo img {
-      width: 188px; /* TODO: Картинки */
-      height: 96px; /* TODO: Картинки */
+    &__logo-link {
+      width: auto;
+      height: auto;
     }
+
+    &__logo-image {
+      position: static;
+      transform: none;
+    }
+
+    &__logo-bridge,
+    &__logo-triangle { display: inline; }
 
     &__back {
       height: 301px;
       padding-top: 100px;
 
-      background-size: cover; /* TODO: Картинки */
+      background-image: url(../img/bg-back-desktop@1x.jpg);
+      background-size: 1200px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url(../img/bg-back-desktop@2x.jpg);
+      }
+
+      &::after {
+        background-image: url(../img/bg-intro-triangle-desktop.svg);
+      }
     }
 
     &__intro {

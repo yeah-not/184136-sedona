@@ -39,19 +39,19 @@ svg {
 /* TODO: Сетка */
 .page {
   position: relative;
-  padding-bottom: 1000px;
+  // padding-bottom: 1000px;
   // padding-bottom: 300px;
 
   &--index {
-    @include body-bg(index);
+    // @include body-bg(index);
   }
 
   &--media {
-    @include body-bg(photo);
+    // @include body-bg(photo);
   }
 
   &--review {
-    @include body-bg(form, __modal);
+    // @include body-bg(form, __modal);
   }
 
   > * {
@@ -65,7 +65,7 @@ svg {
 // .page-title,
 // .features,
 // .hotel-search,
-.map,
+// .map,
 // .gallery,
 // .video,
 .test {

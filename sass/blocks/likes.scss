@@ -11,6 +11,25 @@
 
     border: none;
     background: none;
+
+    &:hover {
+      #{$block}__icon {
+        fill: $color-main;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      #{$block}__icon {
+        fill: $color-black;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $color-black;
+    opacity: 0.3;
   }
 
   &__num {

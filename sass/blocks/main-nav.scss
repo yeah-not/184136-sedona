@@ -2,6 +2,7 @@
   $block: &;
   order: 1;
   position: relative;
+  z-index: 2;
 
   &__inner {
     overflow: hidden;
@@ -116,6 +117,7 @@
   }
 
   @media (min-width: $screen-md) {
+    z-index: 0;
 
     &__inner {
       display: flex;

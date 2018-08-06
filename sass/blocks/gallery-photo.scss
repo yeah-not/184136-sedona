@@ -13,7 +13,6 @@
   }
 
   &__info {
-    // height: 76px; /* TODO: Сетка */
     line-height: $line-height--large;
   }
 
@@ -91,6 +90,20 @@
 
       color: $text-color--main;
       background-color: transparentize($color-black, 0.7);
+    }
+
+    &__likes {
+
+      .likes__toggle:active {
+        .likes__icon {
+          fill: $color-white;
+        }
+      }
+
+      .likes__icon {
+        fill: $color-white;
+        opacity: 1;
+      }
     }
 
     &--main {
