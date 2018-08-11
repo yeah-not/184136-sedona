@@ -1,4 +1,4 @@
-TODO: Автоматизация и оптимизация.
+TODO: Удалена и добавлена в .gitignore папка build.
 
 + CSS Media queries
 + CSS Minify
