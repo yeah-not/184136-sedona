@@ -1,5 +1,19 @@
-TODO: Адаптивная графика страницы Media & Gallery Photo, Video, Likes. Обновление страниц Media, Index (svg).
+TODO: Удалена и добавлена в .gitignore папка build.
 
++ CSS Media queries
++ CSS Minify
++ SVG Sprite
++ Build Copy
++ Build Clean
++ Change path's
++ Change browser-sync
++ SVG Minify
++ Images Minify
+
+
+
+
+TODO: SVG CSS load
 TODO: Map
 TODO: JS Modal, Form
 TODO: JS, Анимация Nav

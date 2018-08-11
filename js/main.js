@@ -2,6 +2,8 @@ var page = document.querySelector('.page');
 var mainNav = document.querySelector('.main-nav');
 var mainNavToggle = document.querySelector('.main-nav__toggle');
 
+svg4everybody();
+
 page.classList.remove('no-js');
 
 // document.addEventListener('click', function(e) {
