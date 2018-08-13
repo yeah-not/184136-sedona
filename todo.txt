@@ -1,4 +1,4 @@
-TODO: Переделал svg иконки на использование svg-load в background (плагин postcss-inline-svg) - кнопки Video, Main nav toggle, likes, иконки полей формы.
+TODO: Добавлена поддержка развертывания билда на GitHub Pages (ветка gh-pages, плагин gh-pages).
 
 TODO: SVG CSS load
 TODO: Map

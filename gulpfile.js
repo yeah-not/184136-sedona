@@ -17,6 +17,7 @@ var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var imagemin = require('gulp-imagemin');
 
+var ghpages = require('gh-pages');
 var server = require("browser-sync").create();
 
 gulp.task("css", function() {
@@ -59,8 +60,6 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-
-
 gulp.task("clean", function () {
   return gulp.src('build', {read: false})
     .pipe(clean());
@@ -88,6 +87,10 @@ gulp.task("html:update", ["html:copy"], function(done) {
   done();
 });
 
+gulp.task("deploy", function (fn) {
+  ghpages.publish("build", fn);
+});
+
 gulp.task("build", function(fn) {
   sequence(
     "clean",
@@ -99,7 +102,6 @@ gulp.task("build", function(fn) {
     fn
   );
 });
-
 
 gulp.task("serve", function() {
   server.init({
