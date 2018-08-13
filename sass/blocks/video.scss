@@ -81,20 +81,53 @@
     background: none;
     border: none;
 
+    &:active { opacity: 0.3; }
+
+    &--replay {
+      width: 16px;
+      height: 20px;
+
+      background-image: svg-load('../img/icon-video-replay.svg', fill = $color-main--darkest);
+
+      &:hover {
+        background-image: svg-load('../img/icon-video-replay.svg', fill = $color-main);
+      }
+
+      &:active {
+        background-image: svg-load('../img/icon-video-replay.svg', fill = $color-main--darkest);
+      }
+    }
+
     &--subtitles {
+      width: 32px;
+      height: 20px;
       margin-left: auto;
       margin-right: 31px;
+
+      background-image: svg-load('../img/icon-video-subtitles.svg', fill = $color-main--darkest);
+
+      &:hover {
+        background-image: svg-load('../img/icon-video-subtitles.svg', fill = $color-main);
+      }
+
+      &:active {
+        background-image: svg-load('../img/icon-video-subtitles.svg', fill = $color-main--darkest);
+      }
     }
 
-    svg { fill: $color-main--darkest; }
+    &--fullscreen {
+      width: 20px;
+      height: 20px;
 
-    &:hover {
-      svg { fill: $color-main; }
-    }
+      background-image: svg-load('../img/icon-video-fullscreen.svg', fill = $color-main--darkest);
 
-    &:active {
-      opacity: 0.3;
-      svg { fill: $color-main--darkest; }
+      &:hover {
+        background-image: svg-load('../img/icon-video-fullscreen.svg', fill = $color-main);
+      }
+
+      &:active {
+        background-image: svg-load('../img/icon-video-fullscreen.svg', fill = $color-main--darkest);
+      }
     }
   }
 
@@ -145,15 +178,31 @@
 
     &__btn {
 
-      svg { fill: $color-white; }
+      &--replay {
+        background-image: svg-load('../img/icon-video-replay.svg', fill = $color-white);
 
-      &:active {
-        svg { fill: $color-white; }
+        &:active {
+          background-image: svg-load('../img/icon-video-replay.svg', fill = $color-white);
+        }
       }
 
       &--subtitles {
         margin-right: 0;
         margin-left: 15px;
+
+        background-image: svg-load('../img/icon-video-subtitles.svg', fill = $color-white);
+
+        &:active {
+          background-image: svg-load('../img/icon-video-subtitles.svg', fill = $color-white);
+        }
+      }
+
+      &--fullscreen {
+        background-image: svg-load('../img/icon-video-fullscreen.svg', fill = $color-white);
+
+        &:active {
+          background-image: svg-load('../img/icon-video-fullscreen.svg', fill = $color-white);
+        }
       }
     }
   }

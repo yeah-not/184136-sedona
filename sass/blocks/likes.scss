@@ -4,37 +4,31 @@
   &__toggle {
     display: inline-block;
 
+    width: 23px;
+    height: 21px;
     padding: 0;
     margin-right: 10px;
 
     vertical-align: top;
 
     border: none;
-    background: none;
-
-    &:hover {
-      #{$block}__icon {
-        fill: $color-main;
-        opacity: 1;
-      }
-    }
-
-    &:active {
-      #{$block}__icon {
-        fill: $color-black;
-        opacity: 0.5;
-      }
-    }
-  }
-
-  &__icon {
-    fill: $color-black;
+    background: svg-load('../img/icon-like.svg', fill = $color-black) 0 0 no-repeat;
     opacity: 0.3;
-  }
 
   &__num {
     display: inline-block;
     font-weight: bold;
     margin-top: 2px;
   }
+
+  &:hover {
+    background-image: svg-load('../img/icon-like.svg', fill = $color-main);
+    opacity: 1;
+  }
+
+  &:active {
+    background-image: svg-load('../img/icon-like.svg', fill = $color-black);
+    opacity: 0.5;
+  }
+}
 }

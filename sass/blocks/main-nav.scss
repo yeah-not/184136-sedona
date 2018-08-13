@@ -87,27 +87,41 @@
 
       background: none;
       border: none;
-    }
 
-    &__toggle-open,
-    &__toggle-close {
-      display: none;
-      position: absolute;
-      top: 50%; left: 50%;
+      &::after {
+        content: '';
 
-      transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 23px;
+        height: 22px;
+
+        background-repeat: no-repeat;
+      }
     }
-    &__toggle-open { fill: $color-main; }
-    &__toggle-close { fill: $color-white; }
 
     &--closed {
+
       #{$block}__inner { height: 0; }
-      #{$block}__toggle-open { display: block; }
+
+      #{$block}__toggle {
+        &::after {
+          background-image: svg-load('../img/icon-menu.svg', fill = $color-main);
+        }
+      }
     }
 
     &--opened {
-      #{$block}__toggle { top: 0; }
-      #{$block}__toggle-close { display: block; }
+
+      #{$block}__toggle {
+        top: 0;
+
+        &::after {
+          background-image: svg-load('../img/icon-cross.svg', fill = $color-white);
+        }
+      }
     }
 
     @at-root .no-js {

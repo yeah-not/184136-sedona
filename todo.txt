@@ -1,17 +1,4 @@
-TODO: Удалена и добавлена в .gitignore папка build.
-
-+ CSS Media queries
-+ CSS Minify
-+ SVG Sprite
-+ Build Copy
-+ Build Clean
-+ Change path's
-+ Change browser-sync
-+ SVG Minify
-+ Images Minify
-
-
-
+TODO: Переделал svg иконки на использование svg-load в background (плагин postcss-inline-svg) - кнопки Video, Main nav toggle, likes, иконки полей формы.
 
 TODO: SVG CSS load
 TODO: Map

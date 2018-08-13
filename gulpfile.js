@@ -10,6 +10,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var mqpacker = require("css-mqpacker");
+var inlinesvg = require("postcss-inline-svg");
 var cssnano = require('gulp-cssnano');
 
 var svgmin = require('gulp-svgmin');
@@ -23,6 +24,7 @@ gulp.task("css", function() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
+      inlinesvg(),
       autoprefixer({browsers: [
         "last 2 versions",
       ]}),

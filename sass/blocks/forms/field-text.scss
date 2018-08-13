@@ -51,6 +51,15 @@
     padding-right: 58px;
 
     background-color: $color-gray--lighter;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%; right: 29px;
+      transform: translate(50%, -50%);
+
+      background-repeat: no-repeat;
+    }
   }
 
   &__icon {
@@ -74,6 +83,24 @@
 
     #{$block}__input-wrap {
       width: 100%;
+    }
+  }
+
+  &--phone {
+    #{$block}__icon-wrap::after {
+      width: 18px;
+      height: 18px;
+
+      background-image: svg-load('../img/icon-phone.svg');
+    }
+  }
+
+  &--mail {
+    #{$block}__icon-wrap::after {
+      width: 16px;
+      height: 16px;
+
+      background-image: svg-load('../img/icon-mail.svg');
     }
   }
 
