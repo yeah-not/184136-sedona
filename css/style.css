@@ -416,7 +416,8 @@ template {
 
 html {
   box-sizing: border-box;
-  font-size: 10px; }
+  font-size: 10px;
+  background-color: red !important; }
 
 *, *::before, *::after {
   box-sizing: inherit; }
