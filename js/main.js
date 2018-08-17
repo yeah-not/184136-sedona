@@ -22,9 +22,24 @@ if (reviewForm) {
   var reviewEmail = reviewForm.querySelector('[name=email]');
 }
 
-svg4everybody();
+function initMap() {
+  var sedona = {lat: 34.828, lng: -111.607};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: sedona,
+    zoom: 8
+  });
+  var image = 'img/icon-map-marker.svg';
+  var marker = new google.maps.Marker({
+    position: sedona,
+    map: map,
+    icon: image,
+    title: "Sedona"
+  });
+}
 
 page.classList.remove('no-js');
+
+svg4everybody();
 
 if (reviewForm) {
   reviewForm.setAttribute('novalidate', 'novalidate');

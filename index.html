@@ -254,9 +254,8 @@
       </p>
     </section>
     <section class="map">
-      <div class="map__content">
-        <svg class="map__marker" width="27" height="27"><use xlink:href="img/svg-sprite.svg#icon-map-marker"></svg>
-      </div>
+      <div class="map__content" id="map"></div>
+      <img class="map__marker" src="img/icon-map-marker.svg" width="27" height="27" alt="Sedona">
     </section>
   </main>
   <footer class="page-footer">
@@ -287,6 +286,7 @@
     </p>
   </footer>
   <script src="js/svg4everybody.min.js" charset="utf-8"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4cNU9WHDky_bsg2Ewe4xAu4424B23DyQ&callback=initMap"></script>
   <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-TODO: Слежение за JS в Gulp. JS обработка формы, попапов Failure/success, анимация.
+TODO: Добавлены Google maps с кастомным маркером через JS Api.
 
 TODO: JS Modal - IE 11 element.closes();
 TODO: Map
