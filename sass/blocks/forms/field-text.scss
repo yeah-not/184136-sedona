@@ -1,6 +1,6 @@
 .field-text {
   $block: &;
-  $input-padding-x: 21px;
+  $input-padding-x: 17px;
   @include field-notice($block);
 
   margin: 0 0 20px;
@@ -28,7 +28,7 @@
   &__input {
     display: block;
 
-    padding: 16px $input-padding-x;
+    padding: 12px $input-padding-x;
     width: 100%;
 
     font-size: $font-size--large;
@@ -39,10 +39,21 @@
 
     color: $color-black;
     background-color: $color-gray--lightest;
-    border: none;
+    border: 4px solid $color-gray--lightest;
 
     &::placeholder {
       color: $color-gray;
+    }
+
+    &:hover {
+      background-color: $color-gray--lighter;
+      border-color: $color-gray--lighter;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $color-white;
+      border-color: $color-gray--lighter;
     }
   }
 

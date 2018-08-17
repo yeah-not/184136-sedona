@@ -26,6 +26,15 @@
     opacity: 0;
 
     &:checked + #{$block}__text:after { display: block; }
+
+    &:hover + #{$block}__text {
+      &::before {background-color: $color-gray--lighter;}
+    }
+
+    &:active + #{$block}__text {
+      &::before {background-color: $color-gray--light;}
+      &::after {background-image: svg-load('../img/icon-tick.svg', fill = transparentize($color-gray--darkest, 0.7));}
+    }
   }
 
   &__text {
@@ -62,7 +71,16 @@
       width: 24px;
       height: 16px;
 
-      background: url(../img/icon-tick.svg) 0 0 no-repeat;
+      background: svg-load("../img/icon-tick.svg") 0 0 no-repeat;
+    }
+
+    &:hover {
+      &::before {background-color: $color-gray--lighter;}
+    }
+
+    &:active {
+      &::before {background-color: $color-gray--light;}
+      &::after {background-image: svg-load('../img/icon-tick.svg', fill = transparentize($color-gray--darkest, 0.7));}
     }
   }
 
@@ -70,7 +88,7 @@
     $margin-bottom: 30px;
 
     &__inner {
-      margin-bottom: -$margin-bottom;  
+      margin-bottom: -$margin-bottom;
     }
 
     &__name {
