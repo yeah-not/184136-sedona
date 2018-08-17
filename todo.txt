@@ -1,3 +1,3 @@
-TODO: Fix поведения ссылки #visitsedona.
+TODO: Fix выравнивания надписей полей формы Firefox.
 
 TODO: JS Modal - IE 11 element.closes();

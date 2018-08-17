@@ -21,6 +21,8 @@
 
   &__input-wrap {
     display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   &__input {
@@ -46,6 +48,7 @@
 
   &__icon-wrap {
     display: block;
+    display: flex;
     position: relative;
 
     padding-right: 58px;
