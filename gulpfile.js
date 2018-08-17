@@ -16,6 +16,7 @@ var cssnano = require('gulp-cssnano');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var imagemin = require('gulp-imagemin');
+var uglify = require('gulp-uglify');
 
 var ghpages = require('gh-pages');
 var server = require("browser-sync").create();
@@ -82,9 +83,12 @@ gulp.task("html:copy", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("html:update", ["html:copy"], function(done) {
-  server.reload();
-  done();
+gulp.task("html:update", function(fn) {
+  sequence(
+    "html:copy",
+    "reload",
+    fn
+  );
 });
 
 gulp.task("js:copy", function() {
@@ -92,7 +96,23 @@ gulp.task("js:copy", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("js:update", ["js:copy"], function(done) {
+gulp.task("js:minify", function() {
+  return gulp.src("build/js/main.js")
+    .pipe(uglify())
+    .pipe(rename("main.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:update", function(fn) {
+  sequence(
+    "js:copy",
+    "js:minify",
+    "reload",
+    fn
+  );
+});
+
+gulp.task("reload", function(done) {
   server.reload();
   done();
 });
@@ -109,6 +129,7 @@ gulp.task("build", function(fn) {
     "svg-min",
     "svg-sprite",
     "images",
+    "js:minify",
     fn
   );
 });

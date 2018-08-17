@@ -1,4 +1,3 @@
-TODO: Анимация Nav.
+TODO: Gulp - апдейт слежения за JS, HTML; JS минификация.
 
 TODO: JS Modal - IE 11 element.closes();
-TODO: JS минификация
