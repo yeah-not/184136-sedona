@@ -1,6 +1,5 @@
 var page = document.querySelector('.page');
 var mainNav = document.querySelector('.main-nav');
-mainNav
 var mainNavToggle = document.querySelector('.main-nav__toggle');
 
 var storageName = localStorage.getItem('name');

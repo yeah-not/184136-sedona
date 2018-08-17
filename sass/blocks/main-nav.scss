@@ -4,10 +4,6 @@
   position: relative;
   z-index: 2;
 
-  &__inner {
-    overflow: hidden;
-  }
-
   &__toggle { display: none; }
 
   &__items {
@@ -104,7 +100,10 @@
 
     &--closed {
 
-      #{$block}__inner { height: 0; }
+      #{$block}__inner {
+        margin-top: -500px;
+        transition: margin-top 0.6s ease-in;
+      }
 
       #{$block}__toggle {
         &::after {
@@ -114,6 +113,11 @@
     }
 
     &--opened {
+
+      #{$block}__inner {
+        margin-top: 0;
+        transition: margin-top 0.6s ease-out;
+      }
 
       #{$block}__toggle {
         top: 0;

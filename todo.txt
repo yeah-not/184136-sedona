@@ -1,6 +1,4 @@
-TODO: Добавлены Google maps с кастомным маркером через JS Api.
+TODO: Анимация Nav.
 
 TODO: JS Modal - IE 11 element.closes();
-TODO: Map
 TODO: JS минификация
-TODO: JS, Анимация Nav
