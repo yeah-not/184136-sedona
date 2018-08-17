@@ -87,6 +87,16 @@ gulp.task("html:update", ["html:copy"], function(done) {
   done();
 });
 
+gulp.task("js:copy", function() {
+  return gulp.src("js/*.js")
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:update", ["js:copy"], function(done) {
+  server.reload();
+  done();
+});
+
 gulp.task("deploy", function (fn) {
   ghpages.publish("build", fn);
 });
@@ -114,4 +124,5 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.{scss,sass}", ["css"]);
   gulp.watch("*.html", ["html:update"]);
+  gulp.watch("js/*.js", ["js:update"]);
 });

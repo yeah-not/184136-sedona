@@ -19,7 +19,6 @@
 
     background-color: $bg-color;
     box-shadow: 0 7px 15px transparentize($color-black, 0.85);
-    outline: 1px solid blue; /* TODO: Сетка */
   }
 
   &__title {
@@ -51,7 +50,10 @@
     font-size: $font-size--large;
   }
 
-  &--failure { }
+  &--show {
+    display: block;
+    animation: 0.6s pulse;
+  }
 
   &--success {
 
@@ -62,6 +64,13 @@
     #{$block}__actions {
       padding: 20px;
       background-color: $color-gray--lightest;
+    }
+  }
+
+  &--failure {
+
+    &#{$block}--show {
+      animation: 0.6s shake;
     }
   }
 

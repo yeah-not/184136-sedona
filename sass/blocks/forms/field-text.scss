@@ -72,6 +72,17 @@
     padding-left: $input-padding-x;
   }
 
+  &--error {
+    #{$block}__input {
+      outline: 1px solid $color-danger;
+    }
+    #{$block}__icon-wrap {
+      outline: 1px solid $color-danger;
+
+      #{$block}__input { outline: none; }
+    }
+  }
+
   &--inline {
     display: flex;
     align-items: baseline;
