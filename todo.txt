@@ -1,5 +1,6 @@
-TODO: Fix поведения ссылки #visitsedona в футере, likes на странице фото-видео. Fix Edge: Main nav Toggle, Logo, input::placeholder. Обновил autoprefixer.
+TODO: Обновил gulp, gulp-sass, gulp-plumber, gulp-postcss, browser-sync. Выключил outline-grid mixin для фикса сборки.
 
 TODO: checkbox custom outlines
 TODO: Firefox focus outlines???
+TODO: Fix outline-grid mixin
 TODO: JS Modal - IE 11 element.closes();
