@@ -1,3 +1,5 @@
-TODO: Стилизация поведения элементов формы.
+TODO: Fix поведения ссылки #visitsedona в футере, likes на странице фото-видео. Fix Edge: Main nav Toggle, Logo, input::placeholder. Обновил autoprefixer.
 
+TODO: checkbox custom outlines
+TODO: Firefox focus outlines???
 TODO: JS Modal - IE 11 element.closes();

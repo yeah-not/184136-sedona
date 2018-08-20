@@ -18,8 +18,8 @@
       color: $color-black;
       text-decoration: none;
 
-      &:hover {color: $color-main;}
-      &:active {color: transparentize($color-black, 0.7);}
+      &[href]:hover {color: $color-main;}
+      &[href]:active {color: transparentize($color-black, 0.7);}
     }
   }
 
