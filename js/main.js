@@ -1,3 +1,30 @@
+(function() {
+  // проверяем поддержку
+  if (!Element.prototype.matches) {
+    // определяем свойство
+    Element.prototype.matches = Element.prototype.matchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector;
+  }
+})();
+
+(function() {
+  // проверяем поддержку
+  if (!Element.prototype.closest) {
+    // реализуем
+    Element.prototype.closest = function(css) {
+      var node = this;
+
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
+  }
+})();
+
 function initMap() {
   var sedona = {lat: 34.828, lng: -111.607};
   var map = new google.maps.Map(document.getElementById('map'), {

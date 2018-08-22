@@ -1,7 +1,6 @@
-TODO: IE 11: header/footer logo svg fix высоты (убрал height: auto для всех svg), fix цвета плейсхолдера для полей формы, fix google maps js. Добавил picturefill.js.  Добавил для всех svg в вызове (use) preserveAspectRatio="none" для изменеия пропорций в IE 11.
+TODO: IE 11: fix неработающих попапов на странице Отзыва (js полифилы).
 
 TODO: Анимация переключателя меню.
-TODO: picturefill
 TODO: checkbox custom outlines
 TODO: Firefox focus outlines???
 TODO: Fix outline-grid mixin
