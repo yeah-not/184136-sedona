@@ -13,6 +13,8 @@ function initMap() {
   });
 }
 
+// initMap();
+
 var page = document.querySelector('.page');
 var mainNav = document.querySelector('.main-nav');
 var mainNavToggle = document.querySelector('.main-nav__toggle');

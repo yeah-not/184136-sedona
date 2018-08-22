@@ -1,6 +1,9 @@
-TODO: Обновил gulp, gulp-sass, gulp-plumber, gulp-postcss, browser-sync. Выключил outline-grid mixin для фикса сборки.
+TODO: IE 11: header/footer logo svg fix высоты (убрал height: auto для всех svg), fix цвета плейсхолдера для полей формы, fix google maps js. Добавил picturefill.js.  Добавил для всех svg в вызове (use) preserveAspectRatio="none" для изменеия пропорций в IE 11.
 
+TODO: Анимация переключателя меню.
+TODO: picturefill
 TODO: checkbox custom outlines
 TODO: Firefox focus outlines???
 TODO: Fix outline-grid mixin
+TODO: transparentize
 TODO: JS Modal - IE 11 element.closes();

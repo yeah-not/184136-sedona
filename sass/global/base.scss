@@ -9,10 +9,13 @@ html {
   &::after { box-sizing: inherit; }
 }
 
-img,
-svg {
+img {
   max-width: 100%;
   height: auto;
+}
+
+svg {
+  max-width: 100%;
 }
 
 .visually-hidden {

@@ -41,9 +41,10 @@
     background-color: $color-gray--lightest;
     border: 4px solid $color-gray--lightest;
 
-    &::placeholder {
-      color: $color-gray;
-    }
+    // To fix IE 11 bug
+    &:-ms-input-placeholder {color: $color-gray;}
+    &::placeholder {color: $color-gray;}
+
 
     &:hover {
       background-color: $color-gray--lighter;
