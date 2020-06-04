@@ -2,7 +2,7 @@
   $block: &;
   display: inline-block;
 
-  padding: 16px 15px;
+  padding: 15px;
 
   font-size: $font-size--xlarge;
   line-height: $line-height--xlarge;
@@ -14,14 +14,18 @@
 
   color: $color-black;
   background-color: $bg-color--gray;
-  border: none;
+  border: 1px solid $bg-color--gray;
+
+  &:focus { @include focus(1); }
 
   &:hover {
     background-color: $color-gray--lightest;
+    border-color: $color-gray--lightest;
   }
 
   &:active {
     background-color: $color-gray--light;
+    border-color: $color-gray--light;
   }
 
   &:disabled,
@@ -39,11 +43,13 @@
 
     &:hover {
       background-color: $color-main--dark;
+      border-color: $color-main--dark;
     }
 
     &:active {
       color: transparentize($text-color--main, 0.7);
       background-color: $color-main--darker;
+      border-color: $color-main--darker;
     }
 
     &:disabled,

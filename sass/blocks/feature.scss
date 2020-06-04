@@ -136,11 +136,6 @@
 
     &__image {
       width: $col-md * 2;
-
-      img {
-        height: $col-md; /* TODO: Картинки */
-        width: 100%; /* TODO: Картинки */
-      }
     }
 
     &__items {

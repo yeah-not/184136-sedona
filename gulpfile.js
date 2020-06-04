@@ -28,7 +28,7 @@ gulp.task("css", function() {
     .pipe(postcss([
       inlinesvg(),
       autoprefixer({browsers: [
-        "last 2 versions",
+        "last 3 versions",
       ]}),
       mqpacker({
         sort: true,

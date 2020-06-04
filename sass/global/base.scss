@@ -9,11 +9,14 @@ html {
   &::after { box-sizing: inherit; }
 }
 
-img,
-svg {
+img {
   max-width: 100%;
   height: auto;
 }
+
+svg { max-width: 100%; }
+
+a:focus { @include focus; }
 
 .visually-hidden {
   position: absolute !important;
@@ -28,7 +31,12 @@ svg {
 .no-focus {
   a,
   button,
-  input[type="submit"] { outline: none; }
+  input {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 
 @keyframes pulse {

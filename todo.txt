@@ -1,3 +1,0 @@
-TODO: Gulp - апдейт слежения за JS, HTML; JS минификация.
-
-TODO: JS Modal - IE 11 element.closes();

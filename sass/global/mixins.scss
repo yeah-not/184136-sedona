@@ -71,6 +71,17 @@
   }
 }
 
+@mixin focus($isBtn: 0) {
+  // outline: 1px solid #5E9ED6;
+  // outline: 5px auto -webkit-focus-ring-color;
+  outline: none;
+  box-shadow: 0 0 5px 1px #5E9ED6;
+
+  @if $isBtn == 1 {
+    border: 1px solid $color-white;
+  }
+}
+
 @mixin field-notice($block) {
   &__notice {
     display: block;

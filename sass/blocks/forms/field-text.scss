@@ -1,6 +1,6 @@
 .field-text {
   $block: &;
-  $input-padding-x: 21px;
+  $input-padding-x: 17px;
   @include field-notice($block);
 
   margin: 0 0 20px;
@@ -21,12 +21,14 @@
 
   &__input-wrap {
     display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   &__input {
     display: block;
 
-    padding: 16px $input-padding-x;
+    padding: 12px $input-padding-x;
     width: 100%;
 
     font-size: $font-size--large;
@@ -37,15 +39,32 @@
 
     color: $color-black;
     background-color: $color-gray--lightest;
-    border: none;
+    border: 4px solid $color-gray--lightest;
 
-    &::placeholder {
-      color: $color-gray;
+    // To fix IE 11 bug
+    &:-ms-input-placeholder {color: $color-gray;}
+    &::placeholder {color: $color-gray;}
+
+    &:focus {
+      @include focus;
     }
+
+    &:hover {
+      background-color: $color-gray--lighter;
+      border-color: $color-gray--lighter;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $color-white;
+      border-color: $color-gray--lighter;
+    }
+
   }
 
   &__icon-wrap {
     display: block;
+    display: flex;
     position: relative;
 
     padding-right: 58px;
