@@ -45,6 +45,9 @@
     &:-ms-input-placeholder {color: $color-gray;}
     &::placeholder {color: $color-gray;}
 
+    &:focus {
+      @include focus;
+    }
 
     &:hover {
       background-color: $color-gray--lighter;
@@ -56,6 +59,7 @@
       background-color: $color-white;
       border-color: $color-gray--lighter;
     }
+
   }
 
   &__icon-wrap {

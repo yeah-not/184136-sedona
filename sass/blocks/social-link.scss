@@ -27,6 +27,8 @@
     background-color: $color-main--dark;
   }
 
+  &:focus { @include focus(1); }
+
   &:active {
     color: transparentize($text-color--main, 0.7);
     background-color: $color-main--darker;

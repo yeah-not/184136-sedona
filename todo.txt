@@ -1,8 +1,0 @@
-TODO: IE 11: fix неработающих попапов на странице Отзыва (js полифилы).
-
-TODO: Анимация переключателя меню.
-TODO: checkbox custom outlines
-TODO: Firefox focus outlines???
-TODO: Fix outline-grid mixin
-TODO: transparentize
-TODO: JS Modal - IE 11 element.closes();

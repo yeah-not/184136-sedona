@@ -28,6 +28,10 @@
 
     &:checked + #{$block}__text:after { display: block; }
 
+    &:focus + #{$block}__text  {
+      &::before { @include focus; }
+    }
+
     &:hover + #{$block}__text {
       &::before {background-color: $color-gray--lighter;}
     }
