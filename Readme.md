@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Александр Енотов](https://somwhere.in.web).
-* Наставник: `Забавный Енот`.
+* Студент: Александр Горелых
+* Наставник: `Нет`
 
 ---
 
